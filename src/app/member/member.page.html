@@ -1,0 +1,74 @@
+<ion-header>
+
+  
+      
+
+     
+
+
+</ion-header>
+
+<ion-content>
+      
+    <!-- Searchbar with a placeholder -->
+    <ion-searchbar placeholder="会员名称/手机号码/备注称呼"></ion-searchbar>
+
+    <ion-item   detail="true"  routerLink="/recommend">
+      <ion-icon name="trending-up" class="iconfont icon-tuijianshiyong" item-left style="color:red;" >
+      </ion-icon>
+      <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;等级</ion-label>
+      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+  </ion-item>
+  <ion-item (click)="launch()" detail="true">
+      <ion-icon name="pricetags" class="iconfont icon-bangzhujiaoxue" item-left style="color:red;">
+      </ion-icon>
+      <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;标签</ion-label>
+      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+  </ion-item>
+  <ion-item   detail="true" routerLink="/feedback">
+      <ion-icon name="gift" class="iconfont icon-yijianfankui" item-left style="color:red;" >
+      </ion-icon>
+      <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;生日</ion-label>
+      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+  </ion-item>
+
+  <ion-item-divider ></ion-item-divider> 
+  
+  <ion-item routerLink="/home.page.html">
+    <ion-avatar slot="start">
+      <img src="assets/imgs/icon_boy.png">
+    </ion-avatar>
+    <ion-label>
+        <p class="membertop">姓名</p>
+        <p class="membercontent">测试店铺</p>
+    </ion-label>
+    
+    <ion-label class="right">
+        <p class="" ></p>
+    </ion-label>
+
+    <ion-label class="right">
+        <p class="" >下午 14:30</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item routerLink="/home.page.html">
+      <ion-avatar slot="start">
+        <img src="assets/imgs/icon_boy.png">
+      </ion-avatar>
+      <ion-label>
+          <p class="membertop">姓名</p>
+          <p class="membercontent">测试店铺</p>
+      </ion-label>
+      
+      <ion-label class="right">
+          <p class="" ></p>
+      </ion-label>
+
+      <ion-label class="right">
+          <p class="" >下午 14:30</p>
+      </ion-label>
+    </ion-item>
+
+
+</ion-content>

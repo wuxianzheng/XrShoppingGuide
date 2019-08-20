@@ -1,0 +1,89 @@
+<ion-header>
+  <!-- <ion-toolbar>
+    <ion-title>Mycenter</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content >
+
+    <!-- <ion-item-divider ></ion-item-divider> -->
+    <ion-item  class="item item-md item-md-light"  style="background-color: red;" detail="true" lines="none" routerLink="/info" [queryParams]="{ data : user }">
+            <ion-avatar slot="start"  style="width: 80px;height: 80px">
+                <img src="assets/imgs/icon_boy.png" />
+            </ion-avatar>
+            <ion-label>
+                <p>姓名</p>
+                <p>测试店铺</p>
+                <p>这个家伙很懒，什么也没有留下</p>
+            </ion-label>
+    </ion-item>
+
+    <!-- <ion-segment-button value="puppies" style="background-color: #000000;color: aliceblue">
+    </ion-segment-button> -->
+
+    
+    <ion-item-divider style=""></ion-item-divider>
+
+    <!-- <ion-item-divider ></ion-item-divider> -->
+
+    <ion-card>
+    <ion-item   detail="true"  routerLink="/recommend">
+        <ion-icon name="trending-up" class="iconfont icon-tuijianshiyong" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的业绩</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item (click)="launch()" detail="true">
+        <ion-icon name="list-box" class="iconfont icon-bangzhujiaoxue" item-left style="color:red;"></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的订单</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item   detail="true" routerLink="/feedback">
+        <ion-icon name="share" class="iconfont icon-yijianfankui" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;分享业绩</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon name="analytics" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;收益明细</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon  name="clock" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;预约管理</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon name="paper" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;手动核销</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon name="paper" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;核销明细</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon  name="images" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的二维码</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    <ion-item  detail="true" routerLink="/about">
+        <ion-icon name="bulb" class="iconfont icon-guanyuwomen1" item-left style="color:red;" ></ion-icon>
+        <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;活动效果</ion-label>
+        <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+    </ion-item>
+    
+
+   
+
+
+</ion-card>
+<!--
+    <ion-item-divider style="--background: rgb(230, 230, 230)"></ion-item-divider>
+      <ion-item (click)="ApiService.presentConfirm()" detail="false" lines="none">
+         <ion-label style="color:#F90B33;" text-center>退出登录</ion-label>
+      </ion-item>
+     <ion-item-divider style="--background: rgb(230, 230, 230)"></ion-item-divider> -->
+
+  </ion-content>

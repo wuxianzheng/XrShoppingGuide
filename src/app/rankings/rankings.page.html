@@ -1,0 +1,64 @@
+<ion-header>
+
+    
+    <!-- Segment with default selection -->
+    <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+        <ion-segment-button value="python">
+        <ion-label>本店排行</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="javascript">
+        <ion-label>全国排行</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+
+</ion-header>
+
+<ion-content>
+        <!-- <ion-item-divider style=""></ion-item-divider> -->
+  
+        <ion-card>
+         <ion-item   detail="true"  routerLink="/recommend">
+            
+             <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的业绩</ion-label>
+             <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+          </ion-item>
+            <ion-card-content >
+                    <ion-avatar slot="start"  style="width: 60px;height: 60px;float: left;margin-bottom: 5px;">
+                      <img src="assets/imgs/icon_boy.png" />
+                    </ion-avatar>
+                    <ion-avatar slot="start"  style="width: 80px;height: 80px;float: left;margin-left: 18%;">
+                          <img src="assets/imgs/icon_boy.png" />
+                    </ion-avatar>
+
+                    <ion-avatar slot="start"  style="width: 60px;height: 60px;float: right;margin-bottom: 5px;">
+                        <img src="assets/imgs/icon_boy.png" />
+                    </ion-avatar>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+                <ion-item   detail="true"  routerLink="/recommend">
+                    <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的排行</ion-label>
+                    <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的业绩</ion-label>
+                    <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+                 </ion-item>
+                   <ion-card-content >
+                        <ion-avatar slot="start"  style="width: 60px;height: 60px;float: left;margin-bottom: 5px;">
+                            <img src="assets/imgs/icon_boy.png" />
+                         </ion-avatar>
+
+                        <ion-avatar slot="start"  style="width: 80px;height: 80px;float: left;margin-left: 18%;">
+                             <img src="assets/imgs/icon_boy.png" />
+                         </ion-avatar>
+
+                         <ion-avatar slot="start"  style="width: 60px;height: 60px;float: right;margin-bottom: 5px;">
+                                <img src="assets/imgs/icon_boy.png" />
+                        </ion-avatar>
+
+                   </ion-card-content>
+         </ion-card>
+        
+                
+
+</ion-content>
