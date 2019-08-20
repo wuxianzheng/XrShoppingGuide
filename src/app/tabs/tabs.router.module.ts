@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'workbench',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../workbench/workbench.module').then(m => m.WorkbenchPageModule)
+          }
+        ]
+      },
+      {
         path: 'rankings',
         children: [
           {

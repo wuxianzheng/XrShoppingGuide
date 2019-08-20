@@ -1,38 +1,66 @@
 <ion-header>
-
-  
-      
-
-     
-
+    <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+        <ion-segment-button value="python">
+        <ion-label>客户</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="javascript">
+        <ion-label>标签</ion-label>
+        </ion-segment-button>
+    </ion-segment>
 
 </ion-header>
 
 <ion-content>
-      
-    <!-- Searchbar with a placeholder -->
-    <ion-searchbar placeholder="会员名称/手机号码/备注称呼"></ion-searchbar>
+    <ion-item-divider ></ion-item-divider>  
+
+
+    <!-- <ion-searchbar placeholder="会员名称/手机号码/备注称呼"></ion-searchbar>
 
     <ion-item   detail="true"  routerLink="/recommend">
       <ion-icon name="trending-up" class="iconfont icon-tuijianshiyong" item-left style="color:red;" >
       </ion-icon>
       <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;等级</ion-label>
-      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
   </ion-item>
   <ion-item (click)="launch()" detail="true">
       <ion-icon name="pricetags" class="iconfont icon-bangzhujiaoxue" item-left style="color:red;">
       </ion-icon>
       <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;标签</ion-label>
-      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+
   </ion-item>
   <ion-item   detail="true" routerLink="/feedback">
       <ion-icon name="gift" class="iconfont icon-yijianfankui" item-left style="color:red;" >
       </ion-icon>
       <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;生日</ion-label>
-      <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
   </ion-item>
+  <ion-item-divider ></ion-item-divider>  -->
+  
+  
 
-  <ion-item-divider ></ion-item-divider> 
+<ion-card>
+    <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+        <ion-segment-button value="python">
+            <ion-label>全部</ion-label>
+        </ion-segment-button>
+        <ion-segment-button >
+           <ion-label>专属会员</ion-label>
+        </ion-segment-button>
+        <ion-segment-button >
+            <ion-label>正在服务</ion-label>
+        </ion-segment-button>
+        <ion-segment-button >
+            <ion-label>筛选</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-toolbar>
+      <ion-buttons slot="primary">
+        <ion-button (click)="clickedSearch()">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-searchbar placeholder="搜索联系人"></ion-searchbar>
+    </ion-toolbar>
+    
   
   <ion-item routerLink="/home.page.html">
     <ion-avatar slot="start">
@@ -69,6 +97,9 @@
           <p class="" >下午 14:30</p>
       </ion-label>
     </ion-item>
+
+
+  </ion-card>
 
 
 </ion-content>

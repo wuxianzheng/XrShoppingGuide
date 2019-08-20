@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'member', loadChildren: './member/member.module#MemberPageModule' },
   { path: 'rankings', loadChildren: './rankings/rankings.module#RankingsPageModule' },
-  { path: 'messagedialog', loadChildren: './messagedialog/messagedialog.module#MessagedialogPageModule' }
+  { path: 'messagedialog', loadChildren: './messagedialog/messagedialog.module#MessagedialogPageModule' },
+  { path: 'workbench', loadChildren: './workbench/workbench.module#WorkbenchPageModule' }
 ];
 @NgModule({
   imports: [
