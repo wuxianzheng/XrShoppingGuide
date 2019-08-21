@@ -1,0 +1,73 @@
+POST http://api.hnbs8.cn/cube/api/home/queryHome HTTP/1.1
+Host: api.hnbs8.cn
+Connection: keep-alive
+Content-Length: 49
+Accept: application/json, text/plain, */*
+Origin: file://
+platform: android
+User-Agent: Mozilla/5.0 (Linux; Android 9; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36
+token: c4447cd2d82a4136bb52f9f1372766ec
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+X-Requested-With: com.master.cube
+
+mode=week&beginDate=2019-04-28&endDate=2019-05-04
+
+
+{
+	"result": 1,
+	"desc": "成功",
+	"data": {
+		"grossProfit": 40922.75,
+		"amount": 135168.00,
+		"standardAmount": 181081.00,
+		"orderNum": 891,
+		"num": 859,
+		"lastGrossProfit": 30964.55,
+		"lastAmount": 108752.00,
+		"lastStandardAmount": 157820.00,
+		"lastOrderNum": 642,
+		"lastNum": 610,
+		"yearGrossProfit": 21522.48,
+		"yearAmount": 102259.00,
+		"yearStandardAmount": 159290.00,
+		"yearOrderNum": 687,
+		"yearNum": 680,
+		"shoppingCode": "8054",
+		"shoppingName": "店员8054",
+		"shoppingStoreCode": "805",
+		"shoppingStoreName": "店铺805",
+		"shoppingAmount": 11446.00,
+		"shoppingStandardAmount": 16207.00,
+		"shoppingOrderNum": 89,
+		"shoppingNum": 83,
+		"storeCode": "805",
+		"storeName": "店铺805",
+		"storeAmount": 30678.00,
+		"storeStandardAmount": 44554.00,
+		"storeOrderNum": 237,
+		"storeNum": 226,
+		"productCode": "8801962",
+		"productName": "52028-WZ1YGFZ樱格伏织-袜子",
+		"productAmount": 0.00,
+		"productStandardAmount": 931.00,
+		"productOrderNum": 48,
+		"productNum": 49,
+		"vipCode": "",
+		"vipName": "",
+		"vipNewNum": 0,
+		"vipAmount": 22578.00,
+		"vipStandardAmount": 28719.00,
+		"vipOrderNum": 143,
+		"vipNum": 141,
+		"vipLastAmount": 12764.00,
+		"vipLastStandardAmount": 15929.00,
+		"vipLastOrderNum": 70,
+		"vipLastNum": 71,
+		"vipYearAmount": 3295.00,
+		"vipYearStandardAmount": 3944.00,
+		"vipYearOrderNum": 16,
+		"vipYearNum": 16
+	}
+}

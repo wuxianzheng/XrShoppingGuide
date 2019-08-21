@@ -1,0 +1,49 @@
+POST http://api.hnbs8.cn/cube/api/home/queryHomeChart HTTP/1.1
+Host: api.hnbs8.cn
+Connection: keep-alive
+Content-Length: 11
+Accept: application/json, text/plain, */*
+Origin: file://
+platform: android
+User-Agent: Mozilla/5.0 (Linux; Android 9; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36
+token: c4447cd2d82a4136bb52f9f1372766ec
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+X-Requested-With: com.master.cube
+
+mode=months
+
+{
+	"result": 1,
+	"desc": "成功",
+	"data": [{
+		"code": 4,
+		"amount": 620811.000000,
+		"name": "本月"
+	}, {
+		"code": 3,
+		"amount": 2633189.000000,
+		"name": "3月"
+	}, {
+		"code": 2,
+		"amount": 1071030.000000,
+		"name": "2月"
+	}, {
+		"code": 1,
+		"amount": 1008529.000000,
+		"name": "1月"
+	}, {
+		"code": 12,
+		"amount": 951566.000000,
+		"name": "12月"
+	}, {
+		"code": 11,
+		"amount": 996819.000000,
+		"name": "11月"
+	}, {
+		"code": 10,
+		"amount": 651165.000000,
+		"name": "10月"
+	}]
+}

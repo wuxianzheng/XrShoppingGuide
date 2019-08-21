@@ -1,0 +1,216 @@
+<ion-header class="bar-positive" no-border>
+
+    <!-- <ion-toolbar> -->
+    <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" [(ngModel)]="mode" (ngModelChange)="query()">
+        <ion-segment-button style="min-width: 0;" value='today'>
+            <div class="segment-border">今日</div>
+        </ion-segment-button>
+        <ion-segment-button style="min-width: 0;" value='yesterday'>
+            <div class="segment-border">昨日</div>
+        </ion-segment-button>
+        <ion-segment-button style="min-width: 0;" value='week'>
+            <div class="segment-border">本周</div>
+        </ion-segment-button>
+        <ion-segment-button style="min-width: 0;" value='month'>
+            <div class="segment-border">本月</div>
+        </ion-segment-button>
+        <ion-segment-button style="min-width: 0;" value=''>
+            <ion-icon src="assets/icon/ios-funnel-outline.svg" size="small" ></ion-icon>
+        </ion-segment-button>
+    </ion-segment>
+
+    <!-- </ion-toolbar> -->
+</ion-header>
+<ion-content>
+
+    <!--    <div echarts [options]="chartOption" class="demo-chart"></div>-->
+
+    <ion-grid class="item-grid">
+        <ion-row class="item-border">
+            <ion-col class="item-title" text-left>
+                <span class="item-left-border">
+                    零售业绩
+                </span>
+            </ion-col>
+            <ion-col class="item-sub-title col" text-right>{{item?.amount | number:'1.2-2'}}</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div echarts [options]="item?.EChartOption" style="height:100px;"></div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-blank"> {{item?.grossProfit | number:'1.2-2'}}</p>
+                    <p class="item-text-gray">毛利润</p>
+                </ion-label>
+            </ion-col>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-blue">{{item?.avgDiscount*100 | number:'1.2-2' }}%</p>
+                    <p class="item-text-gray">平均折扣</p>
+                </ion-label>
+            </ion-col>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-red">{{item?.yearRatio*100 | number:'1.2-2'}}%
+                        <img class="img-down-up" src="assets/imgs/icon_up.png" *ngIf="item.yearRatio>0">
+                        <img class="img-down-up" src="assets/imgs/icon_down.png" *ngIf="item.yearRatio<0">
+                    </p>
+                    <p class="item-text-gray">同比</p>
+                </ion-label>
+            </ion-col>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-green">{{item?.latelyRatio*100 | number:'1.2-2'}}%
+                        <img class="img-down-up" src="assets/imgs/icon_up.png" *ngIf="item.latelyRatio>0">
+                        <img class="img-down-up" src="assets/imgs/icon_down.png" *ngIf="item.latelyRatio<0">
+                    </p>
+                    <p class="item-text-gray">环比</p>
+                </ion-label>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <ion-grid class="item-grid">
+        <ion-row class="item-border">
+            <ion-col class="item-title" text-left>
+                <span class="item-left-border" detail-push>
+                    销售之星
+                </span>
+            </ion-col>
+        </ion-row>
+        <ion-row class="item-border">
+            <ion-col>
+                <ion-item mode="ios" detail lines="none" (click)="showdetail('store',item?.storeCode)">
+                    <ion-thumbnail slot="start">
+                        <img src="assets/imgs/icon_store.png">
+                    </ion-thumbnail>
+                    <ion-label>
+                        <p>
+                            <span style="font-weight: bold;color: #222222">门店</span>:{{item?.storeCode}}-{{item?.storeName}}
+                        </p>
+                        <p>销售额：{{item?.storeAmount | currency:"¥"}} </p>
+                        <p>销量：{{item?.storeNum | number:'1.0-0'}} </p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="item-border">
+            <ion-col>
+                <ion-item mode="ios" detail lines="none" (click)="showdetail('shopping',item?.shoppingCode)">
+                    <ion-thumbnail slot="start">
+                        <img src="assets/imgs/icon_shoppingguide.png">
+                    </ion-thumbnail>
+                    <ion-label>
+                        <p>
+                            <span style="font-weight: bold;color: #222222">导购</span>:{{item?.shoppingCode}}- {{item?.shoppingName}} [8056]店员8056
+                        </p>
+                        <p>销售额：{{item?.shoppingAmount | currency:"¥" }}</p>
+                        <p>销量：{{item?.shoppingNum | number:'1.0-0'}}</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-row class="item-border">
+            <ion-col>
+                <ion-item mode="ios" detail lines="none" (click)="showdetail('product',item?.productCode)">
+                    <ion-thumbnail slot="start">
+                        <img src="assets/imgs/icon_product.png">
+                    </ion-thumbnail>
+                    <ion-label>
+                        <p>
+                            <span style="font-weight: bold;color: #222222">商品</span>:{{item?.productCode}}-{{item?.productName}}
+                        </p>
+                        <p>销售额：{{item?.productAmount | currency:"¥" }}</p>
+                        <p>销量：{{item?.productNum | number:'1.0-0'}}</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <ion-grid class="item-grid">
+        <ion-row class="item-border">
+            <ion-col class="item-title" text-left>
+                <span class="item-left-border">
+                    VIP贡献
+                </span>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col text-center>
+                <img height="120px" width="120px" src="assets/imgs/bg.png">
+                <div style="position: absolute;width: 100%;top: 50%;margin-top: -13px;margin-left:-10px;color:white;font-size: 20px;">{{item?.vipAmount | currency:"¥" }}</div>
+            </ion-col>
+        </ion-row>
+
+
+        <ion-row>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-blank">{{item?.vipNewNum | number:'1.0-0' }}</p>
+                    <p class="item-text-gray">新增</p>
+                </ion-label>
+            </ion-col>
+
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-red">{{item?.vipYearRatio*100 | number:'1.2-2'}}%
+                        <img class="img-down-up" src="assets/imgs/icon_up.png" *ngIf="item.vipYearRatio>0">
+                        <img class="img-down-up" src="assets/imgs/icon_down.png" *ngIf="item.vipYearRatio<0">
+                    </p>
+                    <p class="item-text-gray">同比</p>
+                </ion-label>
+            </ion-col>
+            <ion-col text-center>
+                <ion-label>
+                    <p class="item-text-green">{{item?.vipLatelyRatio *100 | number:'1.2-2'}}%
+                        <img class="img-down-up" src="assets/imgs/icon_up.png" *ngIf="item.vipLatelyRatio>0">
+                        <img class="img-down-up" src="assets/imgs/icon_down.png" *ngIf="item.vipLatelyRatio<0">
+                    </p>
+                    <p class="item-text-gray">环比</p>
+                </ion-label>
+            </ion-col>
+
+        </ion-row>
+
+    </ion-grid>
+
+    <ion-grid class="item-grid">
+        <ion-row class="item-border">
+            <ion-col class="item-title" text-left>
+                <span class="item-left-border">
+                    零售趋势图
+                </span>
+            </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col size="4" col-4>
+                <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" [(ngModel)]="mode1" (ngModelChange)="query2()">
+                    <ion-segment-button style="min-width: 0;" value='days'>
+                        <div class="segment-border">日</div>
+                    </ion-segment-button>
+                    <ion-segment-button style="min-width: 0;" value='weeks'>
+                        <div class="segment-border">周</div>
+                    </ion-segment-button>
+                    <ion-segment-button style="min-width: 0;" value='months'>
+                        <div class="segment-border">月</div>
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-col>
+            <ion-col size="8" col-8></ion-col>
+        </ion-row>
+        <div echarts [options]="echartOption1" style="height: 260px;"></div>
+
+    </ion-grid>
+
+</ion-content>

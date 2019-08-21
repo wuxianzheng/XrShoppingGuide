@@ -1,0 +1,73 @@
+POST http://api.hnbs8.cn/cube/api/home/queryHome HTTP/1.1
+Host: api.hnbs8.cn
+Connection: keep-alive
+Content-Length: 50
+Accept: application/json, text/plain, */*
+Origin: file://
+platform: android
+User-Agent: Mozilla/5.0 (Linux; Android 9; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36
+token: c4447cd2d82a4136bb52f9f1372766ec
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+X-Requested-With: com.master.cube
+
+mode=month&beginDate=2019-04-01&endDate=2019-04-30
+
+
+{
+	"result": 1,
+	"desc": "成功",
+	"data": {
+		"grossProfit": 132662.86,
+		"amount": 620811.00,
+		"standardAmount": 1029976.00,
+		"orderNum": 3565,
+		"num": 3424,
+		"lastGrossProfit": 1140055.62,
+		"lastAmount": 2633189.00,
+		"lastStandardAmount": 3243651.00,
+		"lastOrderNum": 9819,
+		"lastNum": 9659,
+		"yearGrossProfit": 82701.49,
+		"yearAmount": 329963.25,
+		"yearStandardAmount": 503731.00,
+		"yearOrderNum": 1898,
+		"yearNum": 1917,
+		"shoppingCode": "8056",
+		"shoppingName": "店员8056",
+		"shoppingStoreCode": "805",
+		"shoppingStoreName": "店铺805",
+		"shoppingAmount": 40121.00,
+		"shoppingStandardAmount": 64164.00,
+		"shoppingOrderNum": 256,
+		"shoppingNum": 246,
+		"storeCode": "806",
+		"storeName": "店铺806",
+		"storeAmount": 109672.00,
+		"storeStandardAmount": 189516.00,
+		"storeOrderNum": 628,
+		"storeNum": 604,
+		"productCode": "8801962",
+		"productName": "52028-WZ1YGFZ樱格伏织-袜子",
+		"productAmount": 10.00,
+		"productStandardAmount": 3458.00,
+		"productOrderNum": 161,
+		"productNum": 182,
+		"vipCode": "",
+		"vipName": "",
+		"vipNewNum": 0,
+		"vipAmount": 36945.00,
+		"vipStandardAmount": 48999.00,
+		"vipOrderNum": 210,
+		"vipNum": 201,
+		"vipLastAmount": 206604.00,
+		"vipLastStandardAmount": 240900.00,
+		"vipLastOrderNum": 791,
+		"vipLastNum": 770,
+		"vipYearAmount": 21478.00,
+		"vipYearStandardAmount": 26415.00,
+		"vipYearOrderNum": 105,
+		"vipYearNum": 103
+	}
+}

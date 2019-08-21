@@ -1,0 +1,73 @@
+POST http://api.hnbs8.cn/cube/api/home/queryHome HTTP/1.1
+Host: api.hnbs8.cn
+Connection: keep-alive
+Content-Length: 54
+Accept: application/json, text/plain, */*
+Origin: file://
+platform: android
+User-Agent: Mozilla/5.0 (Linux; Android 9; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36
+token: c4447cd2d82a4136bb52f9f1372766ec
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+X-Requested-With: com.master.cube
+
+mode=yesterday&beginDate=2019-04-29&endDate=2019-04-29
+
+
+{
+	"result": 1,
+	"desc": "成功",
+	"data": {
+		"grossProfit": 5614.50,
+		"amount": 21666.00,
+		"standardAmount": 31049.00,
+		"orderNum": 156,
+		"num": 151,
+		"lastGrossProfit": 5245.30,
+		"lastAmount": 17362.00,
+		"lastStandardAmount": 23773.00,
+		"lastOrderNum": 115,
+		"lastNum": 107,
+		"yearGrossProfit": 5182.85,
+		"yearAmount": 20981.00,
+		"yearStandardAmount": 31704.00,
+		"yearOrderNum": 125,
+		"yearNum": 126,
+		"shoppingCode": "8056",
+		"shoppingName": "店员8056",
+		"shoppingStoreCode": "805",
+		"shoppingStoreName": "店铺805",
+		"shoppingAmount": 2349.00,
+		"shoppingStandardAmount": 3690.00,
+		"shoppingOrderNum": 22,
+		"shoppingNum": 20,
+		"storeCode": "805",
+		"storeName": "店铺805",
+		"storeAmount": 5260.00,
+		"storeStandardAmount": 8476.00,
+		"storeOrderNum": 46,
+		"storeNum": 44,
+		"productCode": "8801962",
+		"productName": "52028-WZ1YGFZ樱格伏织-袜子",
+		"productAmount": 0.00,
+		"productStandardAmount": 190.00,
+		"productOrderNum": 9,
+		"productNum": 10,
+		"vipCode": "",
+		"vipName": "",
+		"vipNewNum": 0,
+		"vipAmount": 4755.00,
+		"vipStandardAmount": 6260.00,
+		"vipOrderNum": 30,
+		"vipNum": 30,
+		"vipLastAmount": 1374.00,
+		"vipLastStandardAmount": 1693.00,
+		"vipLastOrderNum": 7,
+		"vipLastNum": 7,
+		"vipYearAmount": 1334.00,
+		"vipYearStandardAmount": 1563.00,
+		"vipYearOrderNum": 7,
+		"vipYearNum": 7
+	}
+}

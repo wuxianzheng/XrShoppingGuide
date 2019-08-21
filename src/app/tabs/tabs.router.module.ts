@@ -48,6 +48,26 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'Performance',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../Performance/Performance.module').then(m => m.PerformancePageModule)
+          }
+        ]
+      },
+      {
+        path: 'Shopguideranking',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../Shopguideranking/Shopguideranking.module').then(m => m.ShopguiderankingPageModule)
+          }
+        ]
+      },
+      {
         path: 'rankings',
         children: [
           {

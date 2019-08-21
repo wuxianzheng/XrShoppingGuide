@@ -1,0 +1,56 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="dismiss()">
+                <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+
+        <ion-title text-center>
+            筛选条件
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col text-center>
+                <img src="assets/imgs/line.png" style="transform:rotate(180deg);margin-bottom: 4px;">
+                时间
+                <img src="assets/imgs/line.png" style="margin-bottom: 4px;">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col text-center>
+                <ion-datetime doneText="确定" cancelText="取消" displayFormat="YYYY-MM-DD"
+                              pickerFormat="YYYY MM DD" placeholder="开始时间" style="border: 1px solid #eee" [(ngModel)]="beginDate"></ion-datetime>
+            </ion-col>
+            <ion-col text-center>
+                <ion-datetime doneText="确定" cancelText="取消" displayFormat="YYYY-MM-DD"
+                              pickerFormat="YYYY MM DD" placeholder="结束时间" style="border: 1px solid #eee" [(ngModel)]="endDate"></ion-datetime>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <ion-segment mode='ios' [(ngModel)]="days" color="primary">
+                    <ion-segment-button aria-pressed="0" value='7' (click)="buildDate()"> 近一周</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='30' (click)="buildDate()"> 近一月</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='90' (click)="buildDate()"> 近三月</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='180' (click)="buildDate()"> 近半年</ion-segment-button>
+                </ion-segment>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <ion-row>
+        <ion-col style="padding: 0">
+            <ion-button expand="full" fill="outline" style="margin: 0;border: 1px solid #eee;color: #222222" (click)="reset()">重置</ion-button>
+        </ion-col>
+        <ion-col style="padding: 0">
+            <ion-button expand="full" fill="outline" style="margin: 0;border: 1px solid #eee;color: #222222" (click)="dismiss()">确认</ion-button>
+        </ion-col>
+    </ion-row>
+
+</ion-footer>

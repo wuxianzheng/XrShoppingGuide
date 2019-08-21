@@ -1,0 +1,49 @@
+POST http://api.hnbs8.cn/cube/api/home/queryHomeChart HTTP/1.1
+Host: api.hnbs8.cn
+Connection: keep-alive
+Content-Length: 9
+Accept: application/json, text/plain, */*
+Origin: file://
+platform: android
+User-Agent: Mozilla/5.0 (Linux; Android 9; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.99 Mobile Safari/537.36
+token: c4447cd2d82a4136bb52f9f1372766ec
+Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,en-US;q=0.9
+X-Requested-With: com.master.cube
+
+mode=days
+
+{
+	"result": 1,
+	"desc": "成功",
+	"data": [{
+		"code": "2019-04-30",
+		"amount": 20889.000000,
+		"name": "今天"
+	}, {
+		"code": "2019-04-29",
+		"amount": 21666.000000,
+		"name": "04-29"
+	}, {
+		"code": "2019-04-28",
+		"amount": 17362.000000,
+		"name": "04-28"
+	}, {
+		"code": "2019-04-27",
+		"amount": 18673.000000,
+		"name": "04-27"
+	}, {
+		"code": "2019-04-26",
+		"amount": 16702.000000,
+		"name": "04-26"
+	}, {
+		"code": "2019-04-25",
+		"amount": 11311.000000,
+		"name": "04-25"
+	}, {
+		"code": "2019-04-24",
+		"amount": 15437.000000,
+		"name": "04-24"
+	}]
+}

@@ -12,6 +12,12 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
+
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { ModalConditionPageModule } from './modal-condition/modal-condition.module';
+import { ApiService, dateFormat, XrEchart } from './services/api.service';
+import { AppVersionPageModule } from './app-version/app-version.module';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,12 +26,18 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
      AppRoutingModule,
      HttpClientModule,
      IonicStorageModule.forRoot(),
+     ModalConditionPageModule,
+     AppVersionPageModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: LocationStrategy, useClass: HashLocationStrategy },
+    ApiService,
+    dateFormat,
+    XrEchart,
     Camera,
     BarcodeScanner
   ],
