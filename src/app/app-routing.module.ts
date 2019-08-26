@@ -16,7 +16,10 @@ const routes: Routes = [
   { path: 'shopguideranking', loadChildren: './shopguideranking/shopguideranking.module#ShopguiderankingPageModule' },
   { path: 'modal-condition', loadChildren: './modal-condition/modal-condition.module#ModalConditionPageModule' },
   { path: 'addshopguide', loadChildren: './addshopguide/addshopguide.module#ADDshopguidePageModule' },
-  { path: 'performancerankings', loadChildren: './performancerankings/performancerankings.module#PerformancerankingsPageModule' }
+  { path: 'performancerankings', loadChildren: './performancerankings/performancerankings.module#PerformancerankingsPageModule' },
+  { path: 'orderlist', loadChildren: './orderlist/orderlist.module#OrderlistPageModule' },
+  { path: 'orderdtl', loadChildren: './orderdtl/orderdtl.module#OrderdtlPageModule' },
+  { path: 'goodslist', loadChildren: './goodslist/goodslist.module#GoodslistPageModule' }
 
 ];
 @NgModule({

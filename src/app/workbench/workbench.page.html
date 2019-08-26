@@ -6,16 +6,37 @@
 
 <ion-content>
 
+      
 
+    <ng-container *ngFor="let item of data.menu">
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center>
+                    <img src="assets/imgs/line.png" style="transform:rotate(180deg);margin-bottom: 4px;"> {{item.name}}
+                    <img src="assets/imgs/line.png" style="margin-bottom: 4px;">
+                </ion-col>
+            </ion-row>
 
+            <ion-row>
+                <ion-col size="3" text-center *ngFor="let sub of item.sub" (click)="toPage(sub)">
+                    <ion-icon [style.color]="sub.color" class="iconfont {{sub.iconName}}" style="font-size:45px;height:60px">
+                    </ion-icon>
+                    <div>
+                        {{sub.name}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-item-divider style="--background: rgb(230, 230, 230);height: 10px;min-height: 0px"></ion-item-divider>
+    </ng-container>
 
 
     
 
 
 
-    <div echarts [options] = "chartOption" [loading]="showloading" class="demo-chart"></div>
+    <!-- <div echarts [options] = "chartOption" [loading]="showloading" class="demo-chart"></div>
     <div echarts [options] = "Baroptions" [loading]="showloading" class="demo-chart"></div>
     <div echarts [options] = "linkoption" [loading]="showloading" class="demo-chart"></div>
-    <div echarts [options] = "option1" [loading]="showloading" class="demo-chart"  style="width: 300px;height:300px;"></div> 
+    <div echarts [options] = "option1" [loading]="showloading" class="demo-chart"  style="width: 300px;height:300px;"></div>  -->
 </ion-content>
