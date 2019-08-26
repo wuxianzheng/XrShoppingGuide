@@ -35,12 +35,6 @@ export class ModalConditionPage implements OnInit {
 
   }
   
-   // {
-
-
-
-   
-    //}
 
     dismiss() {
         const data = { beginDate: this.beginDate, endDate: this.endDate, days: this.days, list: this.list };

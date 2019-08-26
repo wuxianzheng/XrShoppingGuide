@@ -128,7 +128,7 @@ export class PerformancePage implements OnInit {
 
   query() {
     // this.mode=mode;
-    // alert(this.mode);
+    //alert(this.mode);
     if (this.mode === '') {
 
         this.showCondition();
@@ -251,7 +251,7 @@ queryHomeChart(showLoad: boolean = null) {
           }
         },
           {
-            name: (100 * l.grossProfitRatio).toFixed(2) + '%\n毛利率',
+            name: (100 * l.grossProfitRatio).toFixed(2) + '%\n利率',
             value: l.grossProfitRatio,
             itemStyle: {
               normal: {

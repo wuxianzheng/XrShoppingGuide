@@ -5,12 +5,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AppVersionPage } from './app-version.page';
+import { PerformancerankingsPage } from './performancerankings.page';
+import { NgxEchartsModule } from 'ngx-echarts';
+
+
 
 const routes: Routes = [
   {
     path: '',
-    component: AppVersionPage
+    component: PerformancerankingsPage
   }
 ];
 
@@ -19,8 +22,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    NgxEchartsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AppVersionPage]
+  declarations: [PerformancerankingsPage]
 })
-export class AppVersionPageModule {}
+export class PerformancerankingsPageModule {}

@@ -8,7 +8,7 @@ import { CanLoad, Router } from '@angular/router';
 
 
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { AppVersionPage } from '../app-version/app-version.page';
+
 
 @Injectable({
   providedIn: 'root'
@@ -50,21 +50,21 @@ export class ApiService {
         private router: Router,
         public storage: Storage
   ) {
-      if (this.isAndroid())
-         { this.platform = "android";}
-      else if (this.isIos())
+    if (this.isAndroid())
+        { this.platform = "android";}
+    else if (this.isIos())
         {
             this.platform = "ios";
         }
 
-      this.storage.get("datasource").then(res => {
+    this.storage.get("datasource").then(res => {
           this.datasource = res
       });
 
-      this.storage.get("user").then(res => {
+    this.storage.get("user").then(res => {
           this.user = res
       });
-      this.toastCtrl.show = async function (msg:string) {
+    this.toastCtrl.show = async function (msg:string) {
           const nn = await ToastCtrl.create({
               message: msg,
               duration: 1500,
@@ -72,7 +72,7 @@ export class ApiService {
           });
           await nn.present();
       };
-      this.loadingCtrl.show = async function () {
+    this.loadingCtrl.show = async function () {
 
           this.loading =   await LoadingCtrl.create({
               showBackdrop: false,
@@ -82,7 +82,7 @@ export class ApiService {
            // this.loading = nn; 
 
       };
-      this.loadingCtrl.hide = async function () {
+    this.loadingCtrl.hide = async function () {
           await this.loading.dismiss();
       }
   }
@@ -534,20 +534,20 @@ getRequestContact(): Observable<any>{
   return  this.httpService.get("assets/json/"+data.mode+".json");
 }*/
   async  requestData(data: Reqdata, e: any, showLoad: boolean = false, istest: boolean = false) {
-      //const t = new Reqdata();
-      //t.beginDate = this.beginDate;
-      //t.endDate = this.endDate;
-      //t.code = this.code;
-      // for (var a = 0; a < this.paramsList.length; a++)
-      //   t.list[a]=this.paramsList[a].code;
+    //const t = new Reqdata();
+    //t.beginDate = this.beginDate;
+    //t.endDate = this.endDate;
+    //t.code = this.code;
+    // for (var a = 0; a < this.paramsList.length; a++)
+    //   t.list[a]=this.paramsList[a].code;
 
-      //t.mode = 'getStoreReport';
+    //t.mode = 'getStoreReport';
 
       if (showLoad) {
           await this.loadingCtrl.show(); 
       }
 
-      if (data.pageNum && data.pageNum > 2) data.mode = "emptys";  //模拟空数据返回 测试分页的问题
+    if (data.pageNum && data.pageNum > 2) data.mode = "emptys";  //模拟空数据返回 测试分页的问题
 
       this.http.get('assets/json/' + data.mode + '.json')
           .subscribe(async res => {
@@ -566,8 +566,9 @@ getRequestContact(): Observable<any>{
               console.log(error);
           });
   }
+
   public createPhotos(length: number = 4):any[] {
-     let photos= [];
+    let photos= [];
     for (let i = 1; i < length; i++) {
           photos.push({
               originUrl: `assets/imgs/guidepage_${i}.jpg`,
@@ -575,46 +576,10 @@ getRequestContact(): Observable<any>{
               index: i,
           });
       }
-      photos[2].title = 'This is a title';
-      return photos;
+    photos[2].title = 'This is a title';
+    return photos;
   }
-  async checkVersion() {
-      var l = this;
-      if (this.isMobile())
-          this.appVersion.getVersionNumber().then(function (n) {
-              var t = "";
-              l.isAndroid() ? t = "android" : l.isIos() && (t = "ios");
-              var e = new HttpParams().set("version", n).set("platform", t);
-              l.getVersion(async n => {
-                  if (n[t] && n[t].update) {
-                      const nn = await this.popoverCtrl.create({
-                          component: AppVersionPage,
-                          //translucent: true,
-                          //showBackdrop: false,
-                          enableBackdropDismiss: false,
-                          cssClass: 'popover-version',
-                          mode: 'ios',
-                          componentProps: {
-                              downloadUrl: n[t].downloadUrl,
-                              version: n[t].version,
-                              desc: n[t].desc
-                          }
-                      });
-                      await nn.present();
-                      await nn.onDidDismiss().then(x => {
-                      });
 
-                  }
-              }, {
-                      params: e,
-                      isLoading: !1
-                  });
-          }, function () {
-              setTimeout(function () {
-                  l.checkVersion()
-              }, 500)
-          });
-  }
 }
 
 export class Reqdata {
@@ -716,9 +681,9 @@ export class XrEchart {
               label: {
                   normal: {
                       show: !0,
-                      formatter: function (l) {
-                         var n = l.value;
-                         return n >= 1e4 || n <= -1e3 ? (n / 1e3).toFixed(0) + "k" : n >= 1e3 || n <= -1e3 ? (n / 1e3).toFixed(1) + "k" : 0 == n ? 0 : n.toFixed(1)
+                    formatter: function (l) {
+                        var n = l.value;
+                        return n >= 1e4 || n <= -1e3 ? (n / 1e3).toFixed(0) + "k" : n >= 1e3 || n <= -1e3 ? (n / 1e3).toFixed(1) + "k" : 0 == n ? 0 : n.toFixed(1)
                       }
                   }
               }
@@ -824,7 +789,7 @@ export class dateFormat {
   formatDateCurrentWeekByLast() {
       const l = new Date;
       l.setDate(l.getDate() + 6 - l.getDay());
-      return this.formatDateStr(l);    
+      return this.formatDateStr(l);
   };
 
   formatDateCurrentMonthFirst() {
@@ -856,8 +821,7 @@ export class dateFormat {
   formatDateLastDate(l) {
       const n = new Date;
       n.setDate(n.getDate() + l);
-      return
-          this.formatDateStr(n);
+      return  this.formatDateStr(n);
   };
   formatStrToDate(l) {
       const n = new Date;

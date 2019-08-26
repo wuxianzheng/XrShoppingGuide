@@ -14,9 +14,11 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { ModalConditionPageModule } from './modal-condition/modal-condition.module';
 import { ApiService, dateFormat, XrEchart } from './services/api.service';
-import { AppVersionPageModule } from './app-version/app-version.module';
+
+import { ModalConditionPageModule } from './modal-condition/modal-condition.module';
+
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +29,6 @@ import { AppVersionPageModule } from './app-version/app-version.module';
      HttpClientModule,
      IonicStorageModule.forRoot(),
      ModalConditionPageModule,
-     AppVersionPageModule,
   ],
   providers: [
     StatusBar,

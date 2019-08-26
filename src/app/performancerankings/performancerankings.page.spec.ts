@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppVersionPage } from './app-version.page';
+import { PerformancerankingsPage } from './performancerankings.page';
 
-describe('AppVersionPage', () => {
-  let component: AppVersionPage;
-  let fixture: ComponentFixture<AppVersionPage>;
+describe('PerformancerankingsPage', () => {
+  let component: PerformancerankingsPage;
+  let fixture: ComponentFixture<PerformancerankingsPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppVersionPage ],
+      declarations: [ PerformancerankingsPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AppVersionPage);
+    fixture = TestBed.createComponent(PerformancerankingsPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,12 +1,21 @@
 <ion-header>
-
-  
-
+    <ion-toolbar>
+       <ion-title>工作台</ion-title>
+     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-          
-  
+
+
+
+
+
     
-    
+
+
+
+    <div echarts [options] = "chartOption" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "Baroptions" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "linkoption" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "option1" [loading]="showloading" class="demo-chart"  style="width: 300px;height:300px;"></div> 
 </ion-content>

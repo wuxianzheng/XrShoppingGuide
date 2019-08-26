@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>店铺</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+       
+   
+
+  
+  <ion-grid class="item-grid">
+    <ion-row class="item-border">
+        <ion-col class="item-title" text-left>
+            <span class="item-left-border">
+                新增粉丝
+            </span>
+        </ion-col>
+        <ion-col class="item-sub-title col" text-right>{{item?.amount | number:'1.2-2'}}</ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <div echarts [options]="item?.EChartOption" style="height:100px;"></div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="item-grid">
+    <ion-row class="item-border">
+        <ion-col class="item-title" text-left>
+            <span class="item-left-border">
+                业绩
+            </span>
+        </ion-col>
+    </ion-row>
+
+    <ion-row>
+        <ion-col size="4" col-4>
+            <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" [(ngModel)]="mode1" (ngModelChange)="query2()">
+                <ion-segment-button style="min-width: 0;" value='days'>
+                    <div class="segment-border">日</div>
+                </ion-segment-button>
+                <ion-segment-button style="min-width: 0;" value='weeks'>
+                    <div class="segment-border">周</div>
+                </ion-segment-button>
+                <ion-segment-button style="min-width: 0;" value='months'>
+                    <div class="segment-border">月</div>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-col>
+        <ion-col size="8" col-8></ion-col>
+    </ion-row>
+    <div echarts [options]="echartOption1" style="height: 260px;"></div>
+  </ion-grid>     
+
+</ion-content>

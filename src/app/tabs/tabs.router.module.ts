@@ -58,6 +58,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'Performancerankings',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../Performancerankings/Performancerankings.module').then(m => m.PerformancerankingsPageModule)
+          }
+        ]
+      },
+      {
         path: 'Shopguideranking',
         children: [
           {

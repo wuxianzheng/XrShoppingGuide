@@ -14,9 +14,9 @@ const routes: Routes = [
   { path: 'workbench', loadChildren: './workbench/workbench.module#WorkbenchPageModule' },
   { path: 'performance', loadChildren: './performance/performance.module#PerformancePageModule' },
   { path: 'shopguideranking', loadChildren: './shopguideranking/shopguideranking.module#ShopguiderankingPageModule' },
-  { path: 'app-version', loadChildren: './app-version/app-version.module#AppVersionPageModule' },
   { path: 'modal-condition', loadChildren: './modal-condition/modal-condition.module#ModalConditionPageModule' },
-  { path: 'addshopguide', loadChildren: './addshopguide/addshopguide.module#ADDshopguidePageModule' }
+  { path: 'addshopguide', loadChildren: './addshopguide/addshopguide.module#ADDshopguidePageModule' },
+  { path: 'performancerankings', loadChildren: './performancerankings/performancerankings.module#PerformancerankingsPageModule' }
 
 ];
 @NgModule({

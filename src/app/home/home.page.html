@@ -7,9 +7,8 @@
 </ion-header>
 
 <ion-content>      
-    <ion-grid class="item-grid backcolors" style=" background-color: #ea3b53c7; 
-    color: #f5f0f0;">
-        <ion-row class="item-border">
+    <ion-grid class="item-grid ">
+        <!-- <ion-row class="item-border">
             <ion-col class="item-title" text-left style="padding: 15px;">
                 <span class="item-left-border" >  今日业绩</span>
             </ion-col>
@@ -17,6 +16,15 @@
               <ion-item mode="ios" detail lines="none" (click)="showdetail('store',item?.storeCode)" >
                 查看详情
                </ion-item>
+            </ion-col>
+        </ion-row> -->
+         
+        <ion-row class="item-border"   routerLink="/inventory-summary-ct" >
+            <ion-col text-left>
+                <span class="item-title">今日业绩 </span>
+            </ion-col>
+            <ion-col col-1 text-right style="margin-bottom: auto;margin-top: auto; ">
+                查看详情<ion-icon color="gray " name="ios-arrow-forward" role="img"></ion-icon>
             </ion-col>
         </ion-row>
 
@@ -29,20 +37,20 @@
         <ion-row >
             <ion-col text-center>
                 <ion-label>
-                    <p class="item-text-blank fontcolor">2</p>
-                    <p class="item-text-gray  fontcolor" >新增粉丝数</p>
+                    <p class="item-text-blue ">2</p>
+                    <p class="item-text-gray  " >新增粉丝数</p>
                 </ion-label>
             </ion-col>
             <ion-col text-center>
                 <ion-label>
-                    <p class="item-text-blue fontcolor">42</p>
-                    <p class="item-text-gray fontcolor">新增会员数</p>
+                    <p class="item-text-blue ">42</p>
+                    <p class="item-text-gray ">新增会员数</p>
                 </ion-label>
             </ion-col>
             <ion-col text-center>
                     <ion-label>
-                        <p class="item-text-blue fontcolor">43</p>
-                        <p class="item-text-gray fontcolor">核销卡券数</p>
+                        <p class="item-text-blue ">43</p>
+                        <p class="item-text-gray ">核销卡券数</p>
                     </ion-label>
                 </ion-col>
         </ion-row>

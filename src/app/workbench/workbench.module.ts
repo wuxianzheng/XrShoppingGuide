@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { WorkbenchPage } from './workbench.page';
 
+import { NgxEchartsModule } from 'ngx-echarts';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    NgxEchartsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [WorkbenchPage]
