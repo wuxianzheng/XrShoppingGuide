@@ -1,4 +1,20 @@
 <ion-header class="bar-positive" no-border>
+    
+
+
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title text-center></ion-title>
+        <ion-buttons slot="end" style="display: none;">
+            <ion-button (click)="showCondition()">
+                <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 
     <!-- <ion-toolbar> -->
     <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" [(ngModel)]="mode" (ngModelChange)="query()">
@@ -212,5 +228,13 @@
         <div echarts [options]="echartOption1" style="height: 260px;"></div>
 
     </ion-grid>
+      
+
+     
+    <div echarts [options] = "chartOption123" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "Baroptions" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "linkoption" [loading]="showloading" class="demo-chart"></div>
+    <div echarts [options] = "option1" [loading]="showloading" class="demo-chart"  style="width: 300px;height:300px;"></div> 
+
 
 </ion-content>

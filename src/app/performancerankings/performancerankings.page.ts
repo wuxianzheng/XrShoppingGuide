@@ -157,7 +157,7 @@ buildEChartOption(l) {
         }
       },
         {
-          name: (100 * l.grossProfitRatio).toFixed(2) + '%\n利率',
+          name: (100 * l.grossProfitRatio).toFixed(2) + '%\n',
           value: l.grossProfitRatio,
           itemStyle: {
             normal: {

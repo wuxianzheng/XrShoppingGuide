@@ -3,6 +3,21 @@
       <ion-title>Messagedialog</ion-title>
    </ion-toolbar> -->
 
+   <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="back()">
+            <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title text-center>会员消息</ion-title>
+    <ion-buttons slot="end" style="display: none;">
+        <ion-button (click)="showCondition()">
+            <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+</ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>

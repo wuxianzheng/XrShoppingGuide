@@ -1,12 +1,31 @@
-<ion-header>
+<ion-header no-border>
     <ion-toolbar>
-       <ion-title>工作台</ion-title>
-     </ion-toolbar>
+        <ion-title>
+            控制台
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <!-- <ion-slides pager="true" autoplay="2000" loop="true" speed="2000" ionSlides="4" style="background: #fff;height: 150px">
+        <ion-slide>
+            <img style="width: 90%;height: 140px;border-radius: 10px;opacity: 0.9" src="assets/imgs/banner02.png">
+        </ion-slide>
+        <ion-slide>
+            <img style="width: 90%;height: 140px;border-radius: 10px;opacity: 0.9" src="assets/imgs/banner03.png">
+        </ion-slide>
+        <ion-slide>
+            <img style="width: 90%;height: 140px;border-radius: 10px;opacity: 0.9" src="assets/imgs/banner04.png">
+        </ion-slide>
+        <ion-slide>
+            <img style="width: 90%;height: 140px;border-radius: 10px;opacity: 0.9" src="assets/imgs/banner05.png">
+        </ion-slide>
+        <ion-slide>
+            <img style="width: 90%;height: 140px;border-radius: 10px;opacity: 0.9" src="assets/imgs/banner06.png">
+        </ion-slide>
+    </ion-slides> -->
 
-      
+    <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
 
     <ng-container *ngFor="let item of data.menu">
         <ion-grid>
@@ -27,16 +46,7 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-        <ion-item-divider style="--background: rgb(230, 230, 230);height: 10px;min-height: 0px"></ion-item-divider>
+        <!-- <ion-item-divider style="--background: rgb(230, 230, 230);height: 10px;min-height: 0px"></ion-item-divider> -->
     </ng-container>
 
-
-    
-
-
-
-    <!-- <div echarts [options] = "chartOption" [loading]="showloading" class="demo-chart"></div>
-    <div echarts [options] = "Baroptions" [loading]="showloading" class="demo-chart"></div>
-    <div echarts [options] = "linkoption" [loading]="showloading" class="demo-chart"></div>
-    <div echarts [options] = "option1" [loading]="showloading" class="demo-chart"  style="width: 300px;height:300px;"></div>  -->
 </ion-content>

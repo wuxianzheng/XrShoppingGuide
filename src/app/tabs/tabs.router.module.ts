@@ -28,52 +28,12 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'Messagedialog',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../Messagedialog/Messagedialog.module').then(m => m.MessagedialogPageModule)
-          }
-        ]
-      },
-      {
         path: 'workbench',
         children: [
           {
             path: '',
             loadChildren: () =>
               import('../workbench/workbench.module').then(m => m.WorkbenchPageModule)
-          }
-        ]
-      },
-      {
-        path: 'Performance',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../Performance/Performance.module').then(m => m.PerformancePageModule)
-          }
-        ]
-      },
-      {
-        path: 'Performancerankings',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../Performancerankings/Performancerankings.module').then(m => m.PerformancerankingsPageModule)
-          }
-        ]
-      },
-      {
-        path: 'Shopguideranking',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../Shopguideranking/Shopguideranking.module').then(m => m.ShopguiderankingPageModule)
           }
         ]
       },

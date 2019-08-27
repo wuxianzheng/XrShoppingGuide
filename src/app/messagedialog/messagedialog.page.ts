@@ -12,6 +12,8 @@ export class MessagedialogPage implements OnInit {
   ngOnInit() {
   }
    
- 
+  back() {
+    window.history.back();
+  }
 
 }

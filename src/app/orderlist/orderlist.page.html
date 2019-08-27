@@ -1,11 +1,162 @@
 <ion-header>
+
+
   <ion-toolbar>
-    <ion-title>orderlist</ion-title>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>订单</ion-title>
+      <ion-buttons slot="end" >
+          <ion-button (click)="showCondition()">
+              <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+          </ion-button>
+      </ion-buttons>
   </ion-toolbar>
-</ion-header>
+
+  <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+      <ion-segment-button value="python">
+      <ion-label>我的业绩订单</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="javascript">
+      <ion-label>门店发货订单</ion-label>
+      </ion-segment-button>
+  </ion-segment>
+
+ </ion-header>
 
 <ion-content>
+      
+    <ion-card>
+        <ion-item   detail="false"  routerLink="/orderdtl">
+          <ion-avatar slot="start">
+              <img src="assets/imgs/icon_boy.png">
+          </ion-avatar>
+            <ion-label>
+                <p class="membertop">客户</p>
+                <p class="membercontent">2019.08.26 15:41:28</p>
+            </ion-label>
+
+            <ion-label class="right">
+                <p class=""  style="float: right;">待自提</p>
+            </ion-label>
+
+          <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+       </ion-item>
+       <ion-card-content style="height: 134px; width: 100%;border-bottom-style: solid;border-bottom-color: #77767636; position: relative;">
+          <ion-label class="" style="float: left;">
+              <p class="membertop">订单号：1122</p>
+              <p class="" >总金额</p>
+              <p class="" >提成金额</p>
+              <p class="" >处理门店</p>
+              <p class="" >共一件商品</p>
+          </ion-label>
+          
+          <ion-label class="" style="float: right;">
+              <ion-avatar slot="start"  style="width: 80px;height: 80px">
+                  <img src="assets/imgs/icon_boy.png" />
+              </ion-avatar>
+          </ion-label>
+        </ion-card-content>
+        <ion-item   detail="false"  routerLink="/orderdtl">
+            <ion-label>
+                <p class="membertop">联系买家</p>
+            </ion-label>
+            <ion-label class="right">
+                <p class=""  style="float: right;">备注</p>
+            </ion-label>
+       </ion-item>
+     </ion-card>
+    
+     <ion-card>
+        <ion-item   detail="false"  routerLink="/recommend">
+          <ion-avatar slot="start">
+              <img src="assets/imgs/icon_boy.png">
+          </ion-avatar>
+            <ion-label>
+                <p class="membertop">客户</p>
+                <p class="membercontent">2019.08.26 15:41:28</p>
+            </ion-label>
+
+            <ion-label class="right">
+                <p class=""  style="float: right;">待自提</p>
+            </ion-label>
+
+          <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+       </ion-item>
+       <ion-card-content style="height: 134px; width: 100%;border-bottom-style: solid;border-bottom-color: #77767636; position: relative;">
+          <ion-label class="" style="float: left;">
+              <p class="membertop">订单号：1122</p>
+              <p class="" >总金额</p>
+              <p class="" >提成金额</p>
+              <p class="" >处理门店</p>
+              <p class="" >共一件商品</p>
+          </ion-label>
+          
+          <ion-label class="" style="float: right;">
+              <ion-avatar slot="start"  style="width: 80px;height: 80px">
+                  <img src="assets/imgs/icon_boy.png" />
+              </ion-avatar>
+          </ion-label>
+        </ion-card-content>
+        <ion-item   detail="false"  routerLink="/recommend">
+            <ion-label>
+                <p class="membertop">联系买家</p>
+            </ion-label>
+            <ion-label class="right">
+                <p class=""  style="float: right;">备注</p>
+            </ion-label>
+       </ion-item>
+     </ion-card>
+    
+     <ion-card>
+        <ion-item   detail="false"  routerLink="/recommend">
+          <ion-avatar slot="start">
+              <img src="assets/imgs/icon_boy.png">
+          </ion-avatar>
+            <ion-label>
+                <p class="membertop">客户</p>
+                <p class="membercontent">2019.08.26 15:41:28</p>
+            </ion-label>
+
+            <ion-label class="right">
+                <p class=""  style="float: right;">待自提</p>
+            </ion-label>
+
+          <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+       </ion-item>
+       <ion-card-content style="height: 134px; width: 100%;border-bottom-style: solid;border-bottom-color: #77767636; position: relative;">
+          <ion-label class="" style="float: left;">
+              <p class="membertop">订单号：1122</p>
+              <p class="" >总金额</p>
+              <p class="" >提成金额</p>
+              <p class="" >处理门店</p>
+              <p class="" >共一件商品</p>
+          </ion-label>
+          
+          <ion-label class="" style="float: right;">
+              <ion-avatar slot="start"  style="width: 80px;height: 80px">
+                  <img src="assets/imgs/icon_boy.png" />
+              </ion-avatar>
+          </ion-label>
+        </ion-card-content>
+        <ion-item   detail="false"  routerLink="/recommend">
+            <ion-label>
+                <p class="membertop">联系买家</p>
+            </ion-label>
+            <ion-label class="right">
+                <p class=""  style="float: right;">备注</p>
+            </ion-label>
+       </ion-item>
+     </ion-card>
+    
+
+        
+
+
+
+      
     
   
-
 </ion-content>

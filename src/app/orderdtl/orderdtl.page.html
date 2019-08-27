@@ -1,9 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>orderdtl</ion-title>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>订单详情</ion-title>
+      <ion-buttons slot="end" style="display: none;">
+          <ion-button (click)="showCondition()">
+              <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+          </ion-button>
+      </ion-buttons>
   </ion-toolbar>
+
+  <!-- [(ngModel)]="category" (ngModelChange)="query()" -->
+  <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" >
+      <ion-segment-button style="min-width: 0;" value='1'>
+          <div class="segment-border">订单详情</div>
+      </ion-segment-button>
+       <ion-segment-button style="min-width: 0;" value='2'>
+          <div class="segment-border">备注</div>
+      </ion-segment-button>
+      <ion-segment-button style="min-width: 0;" value='3'>
+          <div class="segment-border">评价</div>
+      </ion-segment-button>
+ 
+  </ion-segment>
+
+
+
 </ion-header>
 
 <ion-content>
 
+       12255
+      
 </ion-content>

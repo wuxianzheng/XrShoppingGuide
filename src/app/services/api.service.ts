@@ -91,7 +91,8 @@ export class ApiService {
       this.menuList = data;
   }
   getMenuList() {
-
+   // this.menuList.length=7;
+    console.log(this.menuList.length)
       if (!this.menuList.length) {
           let that = this;
           this.change(l => {
