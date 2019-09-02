@@ -1,9 +1,89 @@
 <ion-header>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-title>goodslist</ion-title>
-  </ion-toolbar>
+  </ion-toolbar> -->
+
+
+
+    <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>商品</ion-title>
+    </ion-toolbar>
+
+    <ion-toolbar>
+      <ion-buttons slot="primary">
+        <ion-button (click)="clickedSearch()">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-searchbar placeholder="搜索商品"></ion-searchbar>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+       
+    <ion-item   detail="false"  routerLink="/goodsdtl">
+        <ion-avatar slot="start">
+            <img src="assets/imgs/icon_boy.png">
+        </ion-avatar>
+          <ion-label>
+              <p class="membertop">商品名称</p>
+              <p class="membercontent">¥199 <span>提成0.00%</span></p>
+              <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
+          </ion-label>
 
+          <ion-label class="right">
+              <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
+          </ion-label>
+
+        <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+    </ion-item>
+
+    <ion-item   detail="false"  routerLink="/goodsdtl">
+      <ion-avatar slot="start">
+          <img src="assets/imgs/icon_boy.png">
+      </ion-avatar>
+        <ion-label>
+            <p class="membertop">商品名称</p>
+            <p class="membercontent">¥199 <span>提成0.00%</span></p>
+            <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
+        </ion-label>
+
+        <ion-label class="right">
+            <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
+        </ion-label>
+
+      <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+     </ion-item>
+
+     <ion-item   detail="false"  routerLink="/goodsdtl">
+        <ion-avatar slot="start">
+          <img src="assets/imgs/icon_boy.png">
+        </ion-avatar>
+        <ion-label>
+            <p class="membertop">商品名称</p>
+            <p class="membercontent">¥199 <span>提成0.00%</span></p>
+            <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
+        </ion-label>
+
+        <ion-label class="right">
+            <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
+        </ion-label>
+
+      <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+     </ion-item>
+
+  
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title></ion-title>
+    <ion-button expand="block" fill="outline" (click)="goodsadd()" >发布商品</ion-button>
+  </ion-toolbar>
+</ion-footer>

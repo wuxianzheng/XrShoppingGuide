@@ -15,7 +15,7 @@ import { ModalConditionPage } from '../modal-condition/modal-condition.page';
 export class PerformancePage implements OnInit {
   chartOption: EChartOption;
   item: any;
-  echartOption1: EChartOption;
+  echartOption1: any;
   mode = 'today';
   beginDate = '';
   endDate = '';

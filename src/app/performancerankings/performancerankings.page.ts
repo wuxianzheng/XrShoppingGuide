@@ -16,10 +16,10 @@ import { ApiService, Reqdata, dateFormat} from '../services/api.service';
   styleUrls: ['./performancerankings.page.scss'],
 })
 export class PerformancerankingsPage implements OnInit {
-
+ 
   chartOption: EChartOption;
   item: any;
-  echartOption1: EChartOption;
+  echartOption1: any;
   mode = 'today';
   beginDate = '';
   endDate = '';

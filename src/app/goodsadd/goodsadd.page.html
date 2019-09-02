@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title text-center>发布商品</ion-title>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+
+
+    <div class="picture-number">
+        <p >图片上传</p>
+        <p >{{uploadPictureNum}}</p>
+        </div>
+        <div>
+        <ul class="upload-files"> 
+          <li class="upload-file" *ngFor="let image of previewImageUrl" [style.background-image]="image.fileUrl" (click)="previewImg(image.fileUrl)"></li>
+        </ul>    
+        <div class="upload-input-box">
+          <input class="upload-input-box-img" type="file" accept="image/*" multiple (change)="selectPicture($event)" />
+        </div>
+    </div>
+    
+    <ion-text color="primary">
+          
+    </ion-text>
+
+  <ion-item>
+      <ion-label position="floating"> 名称</ion-label>
+      <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating"> 品类</ion-label>
+      <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating"> 吊牌价</ion-label>
+       <ion-input></ion-input>
+   </ion-item>
+   <ion-item>
+       <ion-label position="floating"> 现售价</ion-label>
+       <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+     <ion-label position="floating"> 库存</ion-label>
+     <ion-input></ion-input>
+</ion-item>
+
+  <ion-button expand="block" >确定</ion-button>
+
+  <!-- <ion-router>
+    <ion-route-redirect from="/admin" to="/login"></ion-route-redirect>
+    <ion-route-redirect from="/login" to="/admin"></ion-route-redirect>
+  </ion-router> -->
+
+  
+
+</ion-content>

@@ -83,9 +83,9 @@
             "sub": [],
             "procId": "",
             "category": 0,
-            "page": "procurement-summary",
+            "page": "goodslist",
             "color": "#1fcdf8",
-            "name": "采购汇总",
+            "name": "商品",
             "iconName": "icon-icon_venuenotice",
             "checked": false
           },
@@ -98,7 +98,7 @@
             "category": 0,
             "page": "distribution-summary",
             "color": " #6099ff",
-            "name": "配货汇总",
+            "name": "发货",
             "iconName": "icon-peihuohuizong",
             "checked": false
           },

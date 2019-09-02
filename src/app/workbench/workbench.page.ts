@@ -52,9 +52,9 @@ export class WorkbenchPage implements OnInit {
             ];
             console.log(l);
             that.requestData(l);
-        });
-        this.api.storage.get("datasource") && this.api.storage.get("datasource").then(l => {
-        that.selectedDataSource = l;
+         });
+          this.api.storage.get("datasource") && this.api.storage.get("datasource").then(l => {
+          that.selectedDataSource = l;
          });
     }
 

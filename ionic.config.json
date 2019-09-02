@@ -1,5 +1,6 @@
 {
   "name": "XrShoppingGuide",
-  "integrations": {},
+  "integrations": {
+  },
   "type": "angular"
 }
