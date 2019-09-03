@@ -18,6 +18,7 @@ import { ApiService, dateFormat, XrEchart } from './services/api.service';
 
 import { ModalConditionPageModule } from './modal-condition/modal-condition.module';
 
+import { PreviewimgPageModule } from './previewimg/previewimg.module';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ModalConditionPageModule } from './modal-condition/modal-condition.modu
      HttpClientModule,
      IonicStorageModule.forRoot(),
      ModalConditionPageModule,
+     PreviewimgPageModule,
   ],
   providers: [
     StatusBar,

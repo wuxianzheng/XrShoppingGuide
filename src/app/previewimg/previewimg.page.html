@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>previewimg</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="preview">
+    <span class="preview-img" [style.background-image]="imageUrl" (click)="dismissImage('dismissOnly')"></span>
+    <div class="delete-img" (click)="dismissImage('delete')">
+      <ion-icon name="trash"></ion-icon>
+    </div>
+  </div>
+  
+</ion-content>

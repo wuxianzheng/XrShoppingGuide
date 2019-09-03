@@ -1,9 +1,99 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>goodsdtl</ion-title>
-  </ion-toolbar>
+
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title text-center>商品详情</ion-title>
+      </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  
+      <ion-row style="text-align: center;">
+          <ion-col>
+              <!-- {{selectedItem.PictUrl}} -->
+               <img src="assets/imgs/icon_boy.png" alt="">
+          </ion-col>
+      </ion-row>
+      
+      <ion-row style="padding-left: 10%; ">
+         <ion-col>
+            <div class="item-good">
+                <h1>测试礼包</h1>
+                <!-- {{selectedItem.Title}} -->
+                 <div class="list-price buy">
+                    <span class="price-new ml"><i>￥</i>0.01</span>
+                    提成<i class="del f14 ml2">0.00%</i>
+                  </div>
+              </div>
+         </ion-col>
+      </ion-row>
+        <!-- <div *ngFor="let img of imgs">
+            <img src="{{img}}" alt="">
+        </div> -->
+      <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
+   
+
+      <ng-container >
+          <ion-grid class="item-grid" style="padding-left: 10%; padding-right: 10%; ">
+              <ion-row>
+                  <ion-col text-center>
+                      <ion-label >
+                          <p  style="float: left;" class="item-text-black ">配送方式</p>
+                          <p  style="float: right;"  class="item-text-black ">仅自提</p>
+                      </ion-label>
+                  </ion-col>
+                 
+              </ion-row>
+              <ion-row>
+                  <ion-col text-center>
+                      <ion-label  >
+                          <p  style="float: left;" class="item-text-black ">限购数量</p>
+                          <p  style="float: right;"  class="item-text-black ">无限制</p>
+                      </ion-label>
+                  </ion-col>
+                  
+              </ion-row>
+              <ion-row>
+                  <ion-col text-center>
+                      <ion-label>
+                          <p  style="float: left;" class="item-text-black ">是否能使用优惠券</p>
+                          <p  style="float: right;"  class="item-text-black ">否</p>
+                      </ion-label>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </ng-container>
+     
+      <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
+       
+        <ion-grid style="padding-left: 10%; padding-right: 10%; ">
+           <ion-row>
+             <ion-col text-center>
+                <ion-label >
+                    <p  style="float: left;" class="item-text-black ">图文详情</p>
+                    <p  style="float: right;"  class="item-text-black "> ></p>
+                </ion-label>
+            </ion-col>
+           </ion-row>
+         </ion-grid>
+
+      <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-segment>
+        <ion-segment-button value="all" checked> 加入收银台 </ion-segment-button>
+        <ion-segment-button value="favorites"> 立即开单</ion-segment-button>
+       </ion-segment>
+      </ion-toolbar>
+</ion-footer>
+
+  
+    
+   

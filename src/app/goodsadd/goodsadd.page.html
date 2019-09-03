@@ -16,8 +16,8 @@
     <div class="picture-number">
         <p >图片上传</p>
         <p >{{uploadPictureNum}}</p>
-        </div>
-        <div>
+    </div>
+    <div>
         <ul class="upload-files"> 
           <li class="upload-file" *ngFor="let image of previewImageUrl" [style.background-image]="image.fileUrl" (click)="previewImg(image.fileUrl)"></li>
         </ul>    
@@ -25,6 +25,12 @@
           <input class="upload-input-box-img" type="file" accept="image/*" multiple (change)="selectPicture($event)" />
         </div>
     </div>
+    
+
+
+
+    <ion-button (click)="chooseImage()">上传图片</ion-button>
+
     
     <ion-text color="primary">
           

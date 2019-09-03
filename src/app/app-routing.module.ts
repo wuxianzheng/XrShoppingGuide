@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'orderdtl', loadChildren: './orderdtl/orderdtl.module#OrderdtlPageModule' },
   { path: 'goodslist', loadChildren: './goodslist/goodslist.module#GoodslistPageModule' },
   { path: 'goodsdtl', loadChildren: './goodsdtl/goodsdtl.module#GoodsdtlPageModule' },
-  { path: 'goodsadd', loadChildren: './goodsadd/goodsadd.module#GoodsaddPageModule' }
+  { path: 'goodsadd', loadChildren: './goodsadd/goodsadd.module#GoodsaddPageModule' },
+  { path: 'previewimg', loadChildren: './previewimg/previewimg.module#PreviewimgPageModule' }
 
 ];
 @NgModule({

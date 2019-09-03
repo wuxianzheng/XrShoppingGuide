@@ -130,6 +130,16 @@ export class ApiService {
       this.iab.create("http://xuner.cn", "_system");
   }
 
+//   uploadPicture(file:File):Observable<any>{
+// 	    const formData: any = new FormData();
+// 	    formData.append('file',file,file.name);
+// 	    return this.that.http.post(this.getServiceUrl(), formData).map((res)=>{
+// 	         let restResult = res.json() as RestResult<string>;
+// 	          return restResult.value;
+// 	      });
+//     }
+
+
 async presentConfirm() {
 
     const alert = await this.alertCtrl.create({

@@ -111,21 +111,8 @@
             "category": 0,
             "page": "receivable-summary",
             "color": "#6099ff",
-            "name": "应收汇总",
+            "name": "2",
             "iconName": "icon-huiyuanhuoyue",
-            "checked": false
-          },
-          {
-            "id": "3e810ebc70b944bc9fcad07a0c328b20",
-            "parentId": "10413e2643b911e89e2600163e08596b",
-            "system": true,
-            "sub": [],
-            "procId": "",
-            "category": 0,
-            "page": "wholesale-summary",
-            "color": "#6099ff",
-            "name": "批发汇总",
-            "iconName": "icon-pifahuizong",
             "checked": false
           }
         ],

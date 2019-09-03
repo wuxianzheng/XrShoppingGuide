@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoodsdtlPage implements OnInit {
 
+
+  back() {
+    window.history.back();
+  }
+  
   constructor() { }
 
   ngOnInit() {
