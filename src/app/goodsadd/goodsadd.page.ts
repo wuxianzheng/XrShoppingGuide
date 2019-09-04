@@ -60,7 +60,7 @@ export class GoodsaddPage implements OnInit {
      const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
 		 this.ApiService.get(url).then((response: any) => {
 		    	console.log(response);
-	      	 //	this.list = response.result;
+	      	 //	1233this.list = response.result;
      });
 
 
