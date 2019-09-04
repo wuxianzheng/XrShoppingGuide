@@ -5,6 +5,7 @@ import { LoadingController, ToastController, AlertController, PopoverController 
 import { Storage } from '@ionic/storage';
 import { Platform } from '@ionic/angular';
 import { CanLoad, Router } from '@angular/router';
+import { catchError, map, tap } from 'rxjs/operators';
 
 
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
@@ -48,7 +49,7 @@ export class ApiService {
         private alertCtrl: AlertController,
         private iab: InAppBrowser,
         private router: Router,
-        public storage: Storage
+        public storage: Storage,
   ) {
     if (this.isAndroid())
         { this.platform = "android";}
@@ -86,6 +87,29 @@ export class ApiService {
           await this.loading.dismiss();
       }
   }
+
+
+    
+    
+    //get请求
+    get(url: string) {
+		return new Promise((resolve, reject) => {
+            this.http.get(url).subscribe((response) => {resolve(response);},
+             (err) => { reject(err); });
+		 });
+    }
+
+    //post请求
+    post(url: string, body: any) {
+		return new Promise((resolve, reject) => {
+            this.http.post(url, body,{
+                headers: new HttpHeaders({ 'Content-Type': 'application/json;application/x-www-form-urlencodeed; charset=utf-8'})
+              }).subscribe((response) => {resolve(response);},
+             (err) => { reject(err); });
+		 });
+    }
+
+
 
   setMenuList(data) {
       this.menuList = data;
@@ -535,6 +559,12 @@ async presentConfirm() {
 /*  getHomeInfo():  Observable<any> {
   return this.httpService.get("http://jsonplaceholder.typicode.com/users");
 }
+
+
+ 
+
+
+
 
 // 本地json文件请求
 getRequestContact(): Observable<any>{

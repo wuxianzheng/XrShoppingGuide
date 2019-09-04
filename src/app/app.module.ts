@@ -12,14 +12,12 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
-
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { ApiService, dateFormat, XrEchart } from './services/api.service';
 
 import { ModalConditionPageModule } from './modal-condition/modal-condition.module';
 
 import { PreviewimgPageModule } from './previewimg/previewimg.module';
-
 
 @NgModule({
   declarations: [AppComponent],

@@ -31,7 +31,25 @@
 
     <ion-button (click)="chooseImage()">上传图片</ion-button>
 
+
+
     
+    <ion-button (click)="takePicture()">上传图片11</ion-button>
+
+    <div id="license" (click)="takePicture()">
+      <div class="error-loading" *ngIf="uploadLinFail" >
+         <img src="assets/img/login/loading.gif" alt="" class="camera">
+         图片上传中..
+      </div>
+      <img class="img-scale"  [src]="ImageScale" *ngIf="ImageScale"/>
+      <div *ngIf="currentImage">
+          <img src="assets/img/login/camera.png" alt="" class="camera">
+          营业执照
+      </div>
+  </div> 
+
+
+
     <ion-text color="primary">
           
     </ion-text>
