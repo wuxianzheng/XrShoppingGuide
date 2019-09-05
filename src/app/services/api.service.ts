@@ -89,25 +89,67 @@ export class ApiService {
   }
 
 
-    
-    
-    //get请求
+ 
+    //get一般请求方法
     get(url: string) {
-		return new Promise((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             this.http.get(url).subscribe((response) => {resolve(response);},
              (err) => { reject(err); });
-		 });
+        });
+    }
+   
+    
+ 
+    //getbi请求方法
+    getbi(url: string,body: any){
+        return new Promise((resolve, reject) => {
+          this.http.get(url,{
+            headers: new HttpHeaders(
+                { 'Content-Type': 'application/json;charset=utf-8'}
+                ),
+              params : body
+            }).subscribe((response) => {resolve(response);},
+                        (err) => { reject(err); });
+        });
     }
 
-    //post请求
+    // httpOptions = {
+    //     headers: new HttpHeaders({ 'Content-Type': 'application/json;application/x-www-form-urlencoded; charset=utf-8'})
+    // };
+
+    //post一般请求方法
     post(url: string, body: any) {
 		return new Promise((resolve, reject) => {
             this.http.post(url, body,{
-                headers: new HttpHeaders({ 'Content-Type': 'application/json;application/x-www-form-urlencodeed; charset=utf-8'})
-              }).subscribe((response) => {resolve(response);},
-             (err) => { reject(err); });
-		 });
+                headers: new HttpHeaders(
+                    {
+                    'Content-Type':'application/json;charset=utf-8',//application/x-www-form-urlencoded
+                    'Version':'1.0',
+                    'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9kbnMiOiIwMDEiLCJ1bmlxdWVfbmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwibmJmIjoxNTY3NjQ3MTIxLCJleHAiOjE1Njc3MzM1MjEsImlhdCI6MTU2NzY0NzEyMSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDE5MSIsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTAxOTEifQ.WWbLUfCGWTIc-e6r7Jyfn4tZVzogqFuXTS7flxB79QY'
+                    }
+                    )
+                })
+                .subscribe((response) => {resolve(response);},
+                               (err) => { reject(err); });
+        });
     }
+
+    //示例
+    // const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
+	// 	this.ApiService.get(url).then((response: any) => {
+	// 	    console.log(response);
+    // });
+    
+    // const url1 = 'http://47.106.253.255:99/xuner/bi/sales/querySummary';
+    // let body = {
+    //   "shopcode": "33222",
+    //   "goodscode": "222",
+    //   "beginDate": "2019-06-13",
+    //   "endDate": "2019-06-17"
+    // };
+    // this.ApiService.post(url1,body).then((response: any) => {
+    //     console.log(response);
+    // });
 
 
 

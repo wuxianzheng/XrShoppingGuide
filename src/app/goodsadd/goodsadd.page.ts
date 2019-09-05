@@ -4,6 +4,7 @@ import { NavController, NavParams,PopoverController } from '@ionic/angular';
 import { PreviewimgPage } from '../previewimg/previewimg.page';
 import { ApiService, Reqdata, dateFormat} from '../services/api.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { HttpClient, HttpParams, HttpHeaders } from "@angular/common/http";
 
 @Component({
   selector: 'app-goodsadd',
@@ -57,26 +58,46 @@ export class GoodsaddPage implements OnInit {
   takePicture() {
 
 
-     const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
-		 this.ApiService.get(url).then((response: any) => {
-		    	console.log(response);
-	      	 //	1233this.list = response.result;
-     });
+    const url = 'http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1';
+		this.ApiService.get(url).then((response: any) => {
+		    console.log(response);
+	       //	1233this.list = response.result;
+    });
+
+
+    
+    const url1 = 'http://47.106.253.255:99/xuner/bi/sales/querySummary';
+    let body = {
+      "shopcode": "33222",
+      "goodscode": "222",
+      "beginDate": "2019-06-13",
+      "endDate": "2019-06-17"
+    };
+    this.ApiService.post(url1,body).then((response: any) => {
+        console.log(response);
+        //	this.list = response.result;
+    });
 
 
 
+    //  let  d1 = new URLSearchParams();
+    //  d1.append('DbId',   '001' );
+    //  d1.append('UserId',   'admin' );
+    //  d1.append('Password',   '123456');
 
-   
-     
-     const url1 = 'http://www.phonegap100.com/appapi.php';
-     let  d1 = new URLSearchParams();
-     d1.append('a',   'getPortalList' );
-     d1.append('catid',   '20' );
-     d1.append('page',   '1');
-     this.ApiService.post(url1,d1).then((response: any) => {
-      console.log(response);
-       //	this.list = response.result;
-     });
+    // const url1 = 'http://localhost:50191/xuner/bi/oauth/authorize';
+
+    // const params = new HttpParams()
+    //   .set('DbId', '001')
+    //   .set('UserId', 'admin')
+    //   .set('Password', '123456');
+
+    // this.ApiService.getbi(url1,params).then((response: any) => {
+    //     console.log(response);
+    //     //	this.list = response.result;
+    //    });
+
+
 
     // const options: CameraOptions = {
     //   quality: 100,
@@ -123,7 +144,6 @@ export class GoodsaddPage implements OnInit {
 
  // preview image, use popover
   previewImg(url: SafeStyle){
-
     const  popover = this.PopoverController.create({component:PreviewimgPage});
     // popover.onDidDismiss((data)=>{
     //     //delete image
