@@ -1,0 +1,156 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="back()">
+            <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+        </ion-button>
+        <ion-title text-center>订单</ion-title>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+      
+    <!-- <div style="padding:10px 1px;border-bottom: 10px solid rgb(230, 230, 230) "></div> -->
+    
+
+    <ion-grid class="item-grid">
+        
+        <ion-row class="">
+            <ion-col>
+                <ion-item  class=""  style=""  lines="none" routerLink="/info" >
+                    <ion-avatar slot="start"  style="width: 50px;height: 50px">
+                        <img src="assets/imgs/icon_boy.png" />
+                    </ion-avatar>
+                    <ion-label>
+                        <p>刘春兰</p>
+                        <p>微信昵称：如愿</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >姓名备注</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-item-divider style="--background: rgb(247, 245, 245) ;height: 10px;min-height: 0px"></ion-item-divider>
+
+        <ion-row class="item-border">
+            <ion-col>
+                <ion-item   mode="ios"  class="itemboderbot "  style=""  detail lines="none" routerLink="/info" >
+                    <ion-label>
+                        <p>会员卡信息</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >银卡会员|200积分</p>
+                    </ion-label>
+                </ion-item>
+
+                <ion-item  mode="ios"   class=""  style=""  detail lines="none" routerLink="/info" >
+                    <ion-label>
+                        <p>账户余额</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >0</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-item-divider style="--background: rgb(247, 245, 245) ;height: 10px;min-height: 0px"></ion-item-divider>
+        
+        <ion-row class="">
+            <ion-col>
+                <ion-item  class=""  style=""  lines="none" routerLink="/info" >
+                    
+                    <ion-label>
+                        <p>标签</p>
+                        <p>添加</p>
+                    </ion-label>
+            
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-item-divider style="--background: rgb(247, 245, 245);height: 10px;min-height: 0px"></ion-item-divider>
+        
+        <ion-row class="">
+            <ion-col>
+                <ion-item  class="itemboderbot"  style=""  detail lines="none" routerLink="/info" >
+                    <ion-label>
+                        <p>消费记录</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >无购买记录</p>
+                    </ion-label>
+                </ion-item>
+
+                <ion-item  class=""  style=""  detail lines="none" routerLink="/info" >
+                    <ion-label>
+                        <p>剩余优惠券</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >无可用优惠券</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+
+        <ion-item-divider style="--background: rgb(247, 245, 245) ;height: 10px;min-height: 0px"></ion-item-divider>
+        
+        <ion-row class="">
+            <ion-col>
+                <ion-item  class=""  style=""  detail lines="none" routerLink="/info" >
+                    <ion-label>
+                        <p>补充会员信息</p>
+                    </ion-label>
+                    
+                    <ion-label class="right">
+                        <p class="" ></p>
+                    </ion-label>
+            
+                    <ion-label class="right">
+                        <p class="" >点击可编辑</p>
+                    </ion-label>
+                </ion-item>  
+            </ion-col>
+        </ion-row>
+
+        <ion-item-divider style="--background: rgb(247, 245, 245) ;height: 10px;min-height: 0px"></ion-item-divider>
+
+        <ion-button expand="block" fill="outline" (click)="goodsadd()" >发消息</ion-button>
+        <ion-button expand="block" fill="outline" (click)="goodsadd()" >拨打电话110</ion-button>
+
+
+    </ion-grid>
+
+    
+   
+
+
+</ion-content>

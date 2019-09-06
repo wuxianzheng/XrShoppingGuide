@@ -1,0 +1,235 @@
+{
+	"result": 1,
+	"desc": "³É¹¦",
+	"data": [{
+			"id": 17,
+			"productCount": 7,
+			"category": {
+				"id": 17,
+				"familyId": 10,
+				"name": "ÄÐÊ¿TÐô",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2429,
+			"productCount": 1,
+			"category": {
+				"id": 2429,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Å£×Ð¾Å·Ö¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 18,
+			"productCount": 6,
+			"category": {
+				"id": 18,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Å£×Ð¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2430,
+			"productCount": 2,
+			"category": {
+				"id": 2430,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÖÐÐä³ÄÉÀ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 19,
+			"productCount": 10,
+			"category": {
+				"id": 19,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÐÝÏÐ¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2482,
+			"productCount": 50,
+			"category": {
+				"id": 2482,
+				"familyId": 10,
+				"name": "ÄÐÊ¿¶ÌÐäTÐô",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 21,
+			"productCount": 4,
+			"category": {
+				"id": 21,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Î÷·þ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2695,
+			"productCount": 11,
+			"category": {
+				"id": 2695,
+				"familyId": 10,
+				"name": "ÄÐÊ¿¶ÌÐä³ÄÉÀ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 23,
+			"productCount": 4,
+			"category": {
+				"id": 23,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÎÀÒÂ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 24,
+			"productCount": 2,
+			"category": {
+				"id": 24,
+				"familyId": 10,
+				"name": "ÄÐÊ¿¶Ì¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 26,
+			"productCount": 2,
+			"category": {
+				"id": 26,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Î÷¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 27,
+			"productCount": 1,
+			"category": {
+				"id": 27,
+				"familyId": 10,
+				"name": "ÄÐÊ¿±³ÐÄÂí¼×",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 1987,
+			"productCount": 1,
+			"category": {
+				"id": 1987,
+				"familyId": 10,
+				"name": "ÄÐÊ¿¿ã×Ó",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2054,
+			"productCount": 7,
+			"category": {
+				"id": 2054,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÓðÈÞÍâÌ×",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2066,
+			"productCount": 4,
+			"category": {
+				"id": 2066,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Ã«ÄØÍâÌ×",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 10,
+			"productCount": 23,
+			"category": {
+				"id": 10,
+				"familyId": 10,
+				"name": "ÄÐÊ¿³ÄÉÀ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2424,
+			"productCount": 2,
+			"category": {
+				"id": 2424,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÐÝÏÐ¶Ì¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 13,
+			"productCount": 3,
+			"category": {
+				"id": 13,
+				"familyId": 10,
+				"name": "ÄÐÊ¿¼Ð¿Ë",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2425,
+			"productCount": 8,
+			"category": {
+				"id": 2425,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÐÝÏÐ³¤¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 14,
+			"productCount": 3,
+			"category": {
+				"id": 14,
+				"familyId": 10,
+				"name": "ÄÐÊ¿·çÒÂ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2426,
+			"productCount": 6,
+			"category": {
+				"id": 2426,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÐÝÏÐ¾Å·Ö¿ã",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 15,
+			"productCount": 10,
+			"category": {
+				"id": 15,
+				"familyId": 10,
+				"name": "ÄÐÊ¿ÕëÖ¯ÉÀ",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2427,
+			"productCount": 1,
+			"category": {
+				"id": 2427,
+				"familyId": 10,
+				"name": "ÄÐÊ¿Å£×Ð³¤¿ã",
+				"categoryPriority": "n"
+			}
+		}
+	]
+}

@@ -1,10 +1,4 @@
 <ion-header>
-  <!-- <ion-toolbar>
-    <ion-title>goodslist</ion-title>
-  </ion-toolbar> -->
-
-
-
     <ion-toolbar>
       <ion-buttons slot="start">
           <ion-button (click)="back()">
@@ -26,57 +20,24 @@
 
 <ion-content>
        
+  <ng-container *ngFor="let item of list; index as i; ">
     <ion-item   detail="false"  routerLink="/goodsdtl">
         <ion-avatar slot="start">
             <img src="assets/imgs/icon_boy.png">
         </ion-avatar>
           <ion-label>
-              <p class="membertop">商品名称</p>
-              <p class="membercontent">¥199 <span>提成0.00%</span></p>
+              <p class="membertop">{{item?.category.name }}</p>
+              <p class="membercontent">¥{{item?.category.id }} <span>提成0.00%</span></p>
               <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
           </ion-label>
 
           <ion-label class="right">
               <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
           </ion-label>
-
-        <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+       
     </ion-item>
-
-    <ion-item   detail="false"  routerLink="/goodsdtl">
-      <ion-avatar slot="start">
-          <img src="assets/imgs/icon_boy.png">
-      </ion-avatar>
-        <ion-label>
-            <p class="membertop">商品名称</p>
-            <p class="membercontent">¥199 <span>提成0.00%</span></p>
-            <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
-        </ion-label>
-
-        <ion-label class="right">
-            <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
-        </ion-label>
-
-      <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
-     </ion-item>
-
-     <ion-item   detail="false"  routerLink="/goodsdtl">
-        <ion-avatar slot="start">
-          <img src="assets/imgs/icon_boy.png">
-        </ion-avatar>
-        <ion-label>
-            <p class="membertop">商品名称</p>
-            <p class="membercontent">¥199 <span>提成0.00%</span></p>
-            <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
-        </ion-label>
-
-        <ion-label class="right">
-            <ion-icon name="more" class="iconfont" item-left style="color:rgb(61, 60, 60);float: right;" ></ion-icon>
-        </ion-label>
-
-      <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
-     </ion-item>
-
+   </ng-container>
+   
   
 </ion-content>
 
