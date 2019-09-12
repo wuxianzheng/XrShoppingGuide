@@ -635,11 +635,14 @@ getRequestContact(): Observable<any>{
       this.http.get('assets/json/' + data.mode + '.json')
           .subscribe(async res => {
 
-              if (showLoad) {
+            if (showLoad) {
                   await this.loadingCtrl.hide();  // 有数据返回的时候调用关闭loading的方法
               }
-              const item = res['data'];
-
+            let item = res['data'];
+            if(res['data']==null || res['data']==""){
+                //item = res['result'];
+                item = res['result']['stockList'];
+            }
 
               console.log(data.mode + '------->', item);
               istest ? e(res) : e(item);

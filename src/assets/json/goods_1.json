@@ -1,0 +1,235 @@
+﻿{
+	"result": 1,
+	"desc": "成功",
+	"data": [{
+			"id": 17,
+			"productCount": 7,
+			"category": {
+				"id": 17,
+				"familyId": 10,
+				"name": "男士T恤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2429,
+			"productCount": 1,
+			"category": {
+				"id": 2429,
+				"familyId": 10,
+				"name": "男士牛仔九分裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 18,
+			"productCount": 6,
+			"category": {
+				"id": 18,
+				"familyId": 10,
+				"name": "男士牛仔裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2430,
+			"productCount": 2,
+			"category": {
+				"id": 2430,
+				"familyId": 10,
+				"name": "男士中袖衬衫",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 19,
+			"productCount": 10,
+			"category": {
+				"id": 19,
+				"familyId": 10,
+				"name": "男士休闲裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2482,
+			"productCount": 50,
+			"category": {
+				"id": 2482,
+				"familyId": 10,
+				"name": "男士短袖T恤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 21,
+			"productCount": 4,
+			"category": {
+				"id": 21,
+				"familyId": 10,
+				"name": "男士西服",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2695,
+			"productCount": 11,
+			"category": {
+				"id": 2695,
+				"familyId": 10,
+				"name": "男士短袖衬衫",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 23,
+			"productCount": 4,
+			"category": {
+				"id": 23,
+				"familyId": 10,
+				"name": "男士卫衣",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 24,
+			"productCount": 2,
+			"category": {
+				"id": 24,
+				"familyId": 10,
+				"name": "男士短裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 26,
+			"productCount": 2,
+			"category": {
+				"id": 26,
+				"familyId": 10,
+				"name": "男士西裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 27,
+			"productCount": 1,
+			"category": {
+				"id": 27,
+				"familyId": 10,
+				"name": "男士背心马甲",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 1987,
+			"productCount": 1,
+			"category": {
+				"id": 1987,
+				"familyId": 10,
+				"name": "男士裤子",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2054,
+			"productCount": 7,
+			"category": {
+				"id": 2054,
+				"familyId": 10,
+				"name": "男士羽绒外套",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2066,
+			"productCount": 4,
+			"category": {
+				"id": 2066,
+				"familyId": 10,
+				"name": "男士毛呢外套",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 10,
+			"productCount": 23,
+			"category": {
+				"id": 10,
+				"familyId": 10,
+				"name": "男士衬衫",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2424,
+			"productCount": 2,
+			"category": {
+				"id": 2424,
+				"familyId": 10,
+				"name": "男士休闲短裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 13,
+			"productCount": 3,
+			"category": {
+				"id": 13,
+				"familyId": 10,
+				"name": "男士夹克",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2425,
+			"productCount": 8,
+			"category": {
+				"id": 2425,
+				"familyId": 10,
+				"name": "男士休闲长裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 14,
+			"productCount": 3,
+			"category": {
+				"id": 14,
+				"familyId": 10,
+				"name": "男士风衣",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2426,
+			"productCount": 6,
+			"category": {
+				"id": 2426,
+				"familyId": 10,
+				"name": "男士休闲九分裤",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 15,
+			"productCount": 10,
+			"category": {
+				"id": 15,
+				"familyId": 10,
+				"name": "男士针织衫",
+				"categoryPriority": "n"
+			}
+		},
+		{
+			"id": 2427,
+			"productCount": 1,
+			"category": {
+				"id": 2427,
+				"familyId": 10,
+				"name": "男士牛仔长裤",
+				"categoryPriority": "n"
+			}
+		}
+	]
+}

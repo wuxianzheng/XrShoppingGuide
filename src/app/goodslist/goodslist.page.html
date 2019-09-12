@@ -21,13 +21,13 @@
 <ion-content>
        
   <ng-container *ngFor="let item of list; index as i; ">
-    <ion-item   detail="false"  routerLink="/goodsdtl">
+    <ion-item   detail="false"  (click)="showdetail(item?.id)">   <!-- routerLink="/goodsdtl" -->
         <ion-avatar slot="start">
-            <img src="assets/imgs/icon_boy.png">
+             <ion-img [src]="item.productSupplier.picUrl"></ion-img>
         </ion-avatar>
           <ion-label>
-              <p class="membertop">{{item?.category.name }}</p>
-              <p class="membercontent">¥{{item?.category.id }} <span>提成0.00%</span></p>
+              <p class="membertop" style="width: 200px;">{{item?.productSupplier.name }}</p>
+              <p class="membercontent">¥{{item?.minSkuPrice }} <span>提成0.00%</span></p>
               <p class="membercontent"><span>仅自提</span>&nbsp;<span>不支持优惠券</span></p>
           </ion-label>
 

@@ -109,10 +109,35 @@
             "sub": [],
             "procId": "",
             "category": 0,
-            "page": "receivable-summary",
+            "page": "Taketheir",
             "color": "#6099ff",
-            "name": "2",
-            "iconName": "icon-huiyuanhuoyue",
+            "name": "订单自提",
+            "iconName": "icon-shangpinpaiming",
+            "checked": false
+          },{
+            "id": "cb19022543b811e89e2600163e08596b",
+            "parentId": "c1d6e56243b811e89e2600163e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "chargeoff",
+            "color": "#ff983c",
+            "name": "卡券核销",
+            "iconName": "icon-daogoupaiming",
+            "checked": false
+          },
+          {
+            "id": "cba8337443b811e89e2600163e08596b",
+            "parentId": "c1d6e56243b811e89e2600163e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "productrankings",
+            "color": "#0acfd3",
+            "name": "00",
+            "iconName": "icon-shangpinpaiming",
             "checked": false
           }
         ],

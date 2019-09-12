@@ -16,10 +16,15 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 export class GoodslistPage implements OnInit {
    
   list: any = [];
+  data: any = {
+    glist: [],//商品
+  };
   tm: number = 0;
   code: string = "";
   pageNum: number;
   infiniteEnable: boolean;
+  beginDate: string;
+  endDate: string;
 
   constructor(
     private readonly router: Router,
@@ -57,9 +62,12 @@ export class GoodslistPage implements OnInit {
     t.pageNum = this.pageNum;
     t.code = this.code;
     t.tm = this.tm;
-
+  
     t.mode = 'goods';
     this.api.requestData(t, e);
+    // this.api.requestData(t,function (e) {
+    //     n.data = e;
+    //   });
 }
 
   query(e?){
@@ -94,6 +102,17 @@ export class GoodslistPage implements OnInit {
       });
      // alert(this.item.productCode);
    }
+   
+   showdetail(vcode: string) {
+    // alert('detail' + rowno);
+     this.router.navigate(['/goodsdtl'], {
+         queryParams: {
+             code: vcode,
+             //beginDate: this.beginDate,
+             //endDate: this.endDate
+         }
+     });
+ }
 
 }
 

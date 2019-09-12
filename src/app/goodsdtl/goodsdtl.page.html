@@ -10,12 +10,11 @@
       </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content  *ngFor="let item of data.gdlist ">
   
       <ion-row style="text-align: center;">
           <ion-col>
-              <!-- {{selectedItem.PictUrl}} -->
-               <img src="assets/imgs/icon_boy.png" alt="">
+            <ion-img [src]="item.stockVo.productSupplier.picUrl"></ion-img>
           </ion-col>
       </ion-row>
       

@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'goodsdtl', loadChildren: './goodsdtl/goodsdtl.module#GoodsdtlPageModule' },
   { path: 'goodsadd', loadChildren: './goodsadd/goodsadd.module#GoodsaddPageModule' },
   { path: 'previewimg', loadChildren: './previewimg/previewimg.module#PreviewimgPageModule' },
-  { path: 'memberdtl', loadChildren: './memberdtl/memberdtl.module#MemberdtlPageModule' }
+  { path: 'memberdtl', loadChildren: './memberdtl/memberdtl.module#MemberdtlPageModule' },
+  { path: 'taketheir', loadChildren: './taketheir/taketheir.module#TaketheirPageModule' },
+  { path: 'chargeoff', loadChildren: './chargeoff/chargeoff.module#ChargeoffPageModule' }
 
 ];
 @NgModule({
