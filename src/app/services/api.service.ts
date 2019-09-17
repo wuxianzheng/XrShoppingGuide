@@ -640,9 +640,9 @@ getRequestContact(): Observable<any>{
               }
             let item = res['data'];
             if(res['data']==null || res['data']==""){
-                //item = res['result'];
-                item = res['result']['stockList'];
-            }
+                  item = res['result'];
+                 //item = res['result']['stockList'];
+             }
 
               console.log(data.mode + '------->', item);
               istest ? e(res) : e(item);

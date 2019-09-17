@@ -1,0 +1,48 @@
+﻿{
+	"status": "0",
+	"result": [{
+		"customerBean": {
+			"id": 11667048,
+			"customerVo": {
+				"id": 11667048,
+				"name": "独家记忆\uD83C\uDF43",
+				"gender": "2",
+				"avatar": "http://thirdwx.qlogo.cn/mmopen/w3YnaE0uR2lylBVcYRDcVKgXLueLoHVbEozXIsct47DicmruK66mDjee1ZjZNTjQJVUGUed1alYyicdgvZjSPicClaicQPuNHJibB/132",
+				"birthday": 1539619200000,
+				"phone": "13925080860",
+				"supplierId": 11337,
+				"qiakrCustomerId": null,
+				"gmtCreate": 1528080343000,
+				"gmtUpdate": 1568191327000,
+				"cardNo": "113370011667048",
+				"extCardNo": "2020274834",
+				"comment": null,
+				"nameComment": "独家记忆\uD83C\uDF43hhh",
+				"realName": "周女士",
+				"relBind": false
+			},
+			"lastActiveTime": 1568250951000,
+			"subscribe": 1,
+			"point": 4425,
+			"levelName": "银卡会员",
+			"vipLevel": 1,
+			"unit": "积分",
+			"hasCard": true,
+			"tagCount": 0,
+			"hasThisTag": false,
+			"experience": null,
+			"balance": 0
+		},
+		"tagInfo": [],
+		"payInfo": {
+			"lastOrderPaytime": 1565248296000,
+			"orderCount": 35,
+			"orderMoney": 12.95
+		},
+		"couponInfo": {
+			"customerCouponNum": 0,
+			"salesCouponNum": 0
+		},
+		"tagVoList": []
+	}]
+}

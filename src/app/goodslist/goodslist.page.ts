@@ -17,7 +17,7 @@ export class GoodslistPage implements OnInit {
    
   list: any = [];
   data: any = {
-    glist: [],//商品
+    //glist: [],//商品
   };
   tm: number = 0;
   code: string = "";
@@ -75,15 +75,27 @@ export class GoodslistPage implements OnInit {
     this.pageNum = 1;
     this.infiniteEnable = true;
     this.requestData(a => {
-        if (a.length > 0) {
-            n.list = a;
-            console.log(a);
-            //n.buildEChartOption();
-            n.pageNum++;
+      if (a['stockList'].length > 0) {
+          n.list=a['stockList'];
+          console.log(this.list);
+          n.pageNum++;
         }
         else{
             n.list.length = 0;
-          }
+        }
+
+
+        // if (a.length > 0) {
+        //     //n.data=a;
+        //     n.list=a;
+        //     console.log(this.list);
+        //     //n.buildEChartOption();
+        //     n.pageNum++;
+        // }
+        // else{
+        //     n.list.length = 0;
+        //   }
+
     }, e);
   }
 

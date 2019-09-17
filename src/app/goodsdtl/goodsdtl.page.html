@@ -10,18 +10,18 @@
       </ion-toolbar>
 </ion-header>
 
-<ion-content  *ngFor="let item of data.gdlist ">
+<!-- <ion-content  *ngFor="let it of item"> -->
   
       <ion-row style="text-align: center;">
           <ion-col>
-            <ion-img [src]="item.stockVo.productSupplier.picUrl"></ion-img>
+            <ion-img [src]="item.picUrl"></ion-img>
           </ion-col>
       </ion-row>
       
       <ion-row style="padding-left: 10%; ">
          <ion-col>
             <div class="item-good">
-                <h1>测试礼包</h1>
+                <h1>{{item.name}}</h1>
                 <!-- {{selectedItem.Title}} -->
                  <div class="list-price buy">
                     <span class="price-new ml"><i>￥</i>0.01</span>
@@ -74,15 +74,19 @@
              <ion-col text-center>
                 <ion-label >
                     <p  style="float: left;" class="item-text-black ">图文详情</p>
-                    <p  style="float: right;"  class="item-text-black "> ></p>
+                    <p  style="float: right;"  class="item-text-black "> </p>
                 </ion-label>
+                <br/>
+                <ion-label >
+                   {{item.description}}
+                </ion-label >
             </ion-col>
            </ion-row>
          </ion-grid>
 
       <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
 
-</ion-content>
+<!-- </ion-content> -->
 
 <ion-footer>
     <ion-toolbar>

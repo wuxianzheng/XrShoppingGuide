@@ -15,7 +15,8 @@ export class GoodsdtlPage implements OnInit {
     code: string;
     beginDate: string;
     endDate: string;
-   
+    item: any;
+
     data: any = {
       gdlist: [],//商品
       // syfs: [],//收银结算明细
@@ -31,7 +32,39 @@ export class GoodsdtlPage implements OnInit {
         private readonly router: Router
   ) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+   
+    this.item = {
+      id: 0,
+      productId: 0,
+      supplierId: 0,
+      previewJson: '',
+      attributesJson: '',
+      tags: '',
+      name: '',
+      picUrl: '',
+      norms1Id: '',
+      norms2Id: '',
+      gmtUpdate: 1566804240000,
+      gmtCreate: 1565226574000,
+      limitCount: 0,
+      limitDelivery: 0,
+      commissionRate: '',
+      commissionValue: '',
+      commissionType: 0,
+      supplyType: 0,
+      supplyStoreId: '',
+      couponDisable: 0,
+      memberDiscountDisable: 0,
+      memberLevel: 0,
+      supplySalesId: '',
+      dist: 0,
+      productCode: '',
+      limitPoint: 1,
+      description: '',
+      miniappProductInfo: '',
+      supportAppointment: 0
+    };
     this.activated.queryParams.subscribe((params: Params) => {
           this.code = params["code"];
           this.beginDate = params["beginDate"];
@@ -51,7 +84,8 @@ export class GoodsdtlPage implements OnInit {
 
       t.mode = 'goodsdtl';
       this.ApiService.requestData(t,function (e) {
-          n.data = e;
+        n.item = e['stockVo']['productSupplier'];
+        // console.log(this.item);
       });
 }
 
