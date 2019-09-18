@@ -12,52 +12,70 @@ import { ModalController, IonInfiniteScroll } from '@ionic/angular';
 })
 export class OrderlistPage implements OnInit {
 
-    photos: any[] = [];
-    echartOption: any = {};
+
     pageNum: number;
-    // sort: number;
     list: any = [];
     paramsList: any = [];
     infiniteEnable: boolean;
-
-    category: string = "1";
     code: string = "";
     beginDate: string;
     endDate: string;
+    gmtCreate: string;
+    count: number;
 
-    isend: boolean;
-    isFirstPage: boolean;
-    totop: boolean;
-    pagesize: number;
 
   constructor(
     private readonly router: Router,
         private activated: ActivatedRoute,
-       // private alertCtrl: AlertController,
         private api: ApiService,
         private dateFormat: dateFormat,
-      //  private echart: XrEchart,
         public modalCtrl: ModalController
     ) { }
 
   ngOnInit() {
+    this.query();
   }
-  query(e?) {
-    let n = this;
-    this.pageNum = 1;
-    this.infiniteEnable = true;
-    // this.requestData(a => {
-    //     if (a.length > 0) {
-    //         n.list = a;
-    //         n.buildEChartOption();
-    //         n.pageNum++;
-    //     }
-    //     else{
-    //         n.list.length = 0;
-    //       }
-    // }, e);
-}
 
+  requestData(e, n?) {
+    const t = new Reqdata();
+    t.pageNum = this.pageNum;
+    t.code = this.code;
+    t.mode = 'Dzorderlist';
+    this.api.requestData(t, e);
+    // this.api.requestData(t,function (e) {
+    //     n.data = e;
+    // });
+  }
+
+
+    query(e?) {
+      let n = this;
+      this.pageNum = 1;
+      this.count = 0;
+
+      this.requestData(a => {
+        if (a['customerOrders'].length > 0) {
+            n.list=a['customerOrders'];
+            n.gmtCreate=this.api.convertToDate(n.list[this.count].customerOrder.gmtCreate);
+            this.count++;
+            console.log(this.count);
+          }
+          else{
+              n.list.length = 0;
+          }
+      }, e);
+  }
+
+showdetail(vcode: string) {
+  // alert('detail' + rowno);
+   this.router.navigate(['/orderdtl'], {
+       queryParams: {
+           code: vcode,
+           //beginDate: this.beginDate,
+           //endDate: this.endDate
+       }
+   });
+ }
 
   async showCondition() {
 
@@ -93,4 +111,5 @@ export class OrderlistPage implements OnInit {
   back() {
     window.history.back();
   }
+
 }

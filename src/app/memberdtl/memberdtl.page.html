@@ -66,8 +66,10 @@
                 <ion-item  class=""  style=""  detail="false" routerLink="/info" >
                     
                     <ion-label>
-                        <p>标签</p>
-                        <p>添加</p>
+                        <p class="fontweight" style="margin-left: 10px;">标签</p>
+                        <p> 
+                          <ion-button size="small">添加</ion-button>
+                        </p>
                     </ion-label>
             
                 </ion-item>
@@ -82,13 +84,10 @@
                     <ion-label>
                         <p>消费记录</p>
                     </ion-label>
-                    
-                    <ion-label class="right">
-                        <p class="" ></p>
-                    </ion-label>
             
                     <ion-label class="right">
-                        <p class="" >无购买记录</p>
+                        <p class="" >共{{item.payInfo.orderCount}}笔订单,{{item.payInfo.orderMoney}}元</p>
+                        <p class="" >最近消费时间：{{lastOrderPay}}</p>
                     </ion-label>
                 </ion-item>
 
@@ -130,7 +129,7 @@
 
         <ion-item-divider style="--background: rgb(247, 245, 245) ;height: 10px;min-height: 0px"></ion-item-divider>
 
-        <ion-button expand="block" fill="outline" (click)="goodsadd()" >发消息</ion-button>
+        <ion-button expand="block" fill="outline" (click)="goodsadd()"  style="margin-bottom: 25px;">发消息</ion-button>
         <ion-button expand="block" fill="outline" (click)="goodsadd()" >拨打电话{{item.customerBean.customerVo.phone}}</ion-button>
 
 

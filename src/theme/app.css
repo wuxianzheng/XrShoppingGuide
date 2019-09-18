@@ -698,3 +698,9 @@
 .itemboderbot{
     border-bottom: 1px solid #eae3e3
 }
+
+.fontweight
+{
+  font-weight: bold;
+  color: #3C3C3C;
+}

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
       <ion-buttons slot="start">
           <ion-button (click)="back()">
@@ -29,38 +29,40 @@
 </ion-header>
 
 <ion-content>
+    <ng-container *ngFor="let item of list; index as i; ">
         <ion-card>
             <ion-item   detail="false"  >
-                  <ion-avatar slot="start">
-                      <img src="assets/imgs/icon_boy.png">
-                  </ion-avatar>
+                    <ion-avatar slot="start">
+                            <ion-img [src]="item.orderVo.customer.avatar"></ion-img>
+                      </ion-avatar>
                     <ion-label>
-                        <p class="membertop">客户1</p>
-                        <p class="membercontent">15345678962</p>
+                        <p class="membertop">{{item.orderVo.customer.realName}}</p>
+                        <p class="membercontent">{{item.orderVo.customer.phone}}</p>
                     </ion-label>
                 <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> 自定义图标-->
             </ion-item>
             <ion-card-content style="height: 247px; width: 100%;border-bottom-style: solid;border-bottom-color: #77767636; position: relative;">
               <ion-label class="" style="">
                 <p class="membertop">订单基础信息</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">订单编号&nbsp; </span>:444411111</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">订单类型 &nbsp;</span>:在线商城</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">下单时间 &nbsp;</span>:2019.08.27 17:15:52</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">支付方式 &nbsp;</span>:微信支付</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">支付时间 &nbsp;</span>:2019.08.27 17:15:52</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">配送方式&nbsp; </span>:到店自提</p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">提货人名 &nbsp;</span>:客户001    </p>
-                <p class="membertop"> <span style="font-weight: bold;color: #222222">联系电话&nbsp; </span>:13660403524</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">订单状态&nbsp; </span>:{{item.orderVo.customerOrder.status}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">订单编号&nbsp; </span>:{{item.orderVo.customerOrder.code}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">订单类型 &nbsp;</span>:{{item.orderVo.customerOrder.deliveryType}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">下单时间 &nbsp;</span>:{{item.orderVo.customerOrder.gmtCreate}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">支付方式 &nbsp;</span>:{{item.orderVo.customerOrder.payType}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">支付时间 &nbsp;</span>:{{item.orderVo.customerOrder.payTime}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">配送方式&nbsp; </span>:{{item.orderVo.customerOrder.deliveryType}}</p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">提货人名 &nbsp;</span>:{{item.orderVo.customerOrder.receivePersonName}}   </p>
+                <p class="membertop"> <span style="font-weight: bold;color: #222222">联系电话&nbsp; </span>:{{item.orderVo.customerOrder.receiveMobile}}</p>
              </ion-label>
             </ion-card-content>
 
             <ion-card-content style="height: 164px; width: 100%;border-bottom-style: solid;border-bottom-color: #77767636; position: relative;">
                     <ion-label>
                             <p class="membertop">订单处理信息</p>
-                            <p class="membertop"> <span style="font-weight: bold;color: #222222">处理门店&nbsp; </span>:test01</p>
-                            <p class="membertop"> <span style="font-weight: bold;color: #222222">业绩归属门店 &nbsp;</span>:test01</p>
-                            <p class="membertop"> <span style="font-weight: bold;color: #222222">本单服务顾问 &nbsp;</span>:</p>
-                            <p class="membertop"> <span style="font-weight: bold;color: #222222">本单提成 &nbsp;</span>:$0.00</p>
+                            <p class="membertop"> <span style="font-weight: bold;color: #222222">处理门店&nbsp; </span>:{{item.handleStore.name}}</p>
+                            <p class="membertop"> <span style="font-weight: bold;color: #222222">业绩归属门店 &nbsp;</span>:{{item.performanceStore.name}}</p>
+                            <p class="membertop"> <span style="font-weight: bold;color: #222222">本单服务顾问 &nbsp;</span>:{{item.orderVo.customerOrder.serviceStatusString}}</p>
+                            <p class="membertop"> <span style="font-weight: bold;color: #222222">本单提成 &nbsp;</span>:${{item.orderVo.orderItemList[0].deduct}}</p>
                             <p class="membertop"> <span style="font-weight: bold;color: #222222">客户备注 &nbsp;</span>:/</p>
                         </ion-label>
             </ion-card-content>
@@ -74,34 +76,30 @@
              </ion-item>
              <ion-item   detail="false"  >
                     <ion-avatar slot="start">
-                        <img src="assets/imgs/icon_boy.png">
-                    </ion-avatar>
+                            <ion-img [src]="item.orderVo.orderItemList[0].productPicUrl"></ion-img>
+                      </ion-avatar>
                       <ion-label>
                           <p class="membertop">测试商品</p>
-                          <p class="membercontent">￥0.01*1</p>
+                          <p class="membercontent">￥{{item.orderVo.orderItemList[0].price}}*{{item.orderVo.orderItemList[0].shoppingCount}}</p>
                       </ion-label>
                       <ion-label class="right">
-                            <p class=""  style="float: right;">￥0.01元</p>
+                            <p class=""  style="float: right;">￥{{item.orderVo.orderItemList[0].allPrice}}元</p>
                     </ion-label>
-                
               </ion-item>
              <ion-item style="float: right;"> 
                     <ion-label >
-                        <p class="membertop">订单处理信息</p>
-                        <p class="membertop"> <span >处理门店&nbsp; </span>:test01</p>
-                        <p class="membertop"> <span >业绩归属门店 &nbsp;</span>:test01</p>
-                        <p class="membertop"> <span >本单服务顾问 &nbsp;</span>:</p>
-                        <p class="membertop"> <span >本单提成 &nbsp;</span>:$0.00</p>
-                        <p class="membertop"> <span >客户备注 &nbsp;</span>:/</p>
+                        <p class="membertop"> <span >商品总价&nbsp; </span>:{{item.orderVo.orderItemList[0].allPrice}}</p>
+                        <p class="membertop"> <span >优惠 &nbsp;</span>:{{item.orderVo.orderItemList[0].refundPostfee}}</p>
+                        <p class="membertop"> <span >运费&nbsp;</span>:{{item.orderVo.orderItemList[0].refundPostfee}}</p>
+                        <p class="membertop"> <span >实付金额&nbsp;</span>:${{item.orderVo.orderItemList[0].payment}}</p>
                     </ion-label>
              </ion-item>
                  
         </ion-card>
-        
-        <ion-segment-button layout="icon-bottom" style="background:rgb(6, 86, 177);border-style:none;">
-                <ion-icon name="call"></ion-icon>
-                <ion-label>联系客户</ion-label>
-         </ion-segment-button>
+    </ng-container>
 
-          
+    <ion-segment-button layout="icon-bottom" style="background:rgb(30, 33, 36);border-style:none;">
+         <ion-icon name="call" style="color: white;" ></ion-icon>
+         <ion-label style="color: white;">联系客户</ion-label>
+    </ion-segment-button>    
 </ion-content>

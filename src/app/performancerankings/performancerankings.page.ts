@@ -257,5 +257,8 @@ buildEChartOption(l) {
     };
   };
 
-
+  back() {
+    window.history.back();
+  }
+  
 }

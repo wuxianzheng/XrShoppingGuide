@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-segment (ionChange)="segmentChanged($event)" value="python">
+    <ion-segment (ionChange)="query2($event.detail.value)" value="python">
         <ion-segment-button value="python">
         <ion-label>客户</ion-label>
         </ion-segment-button>
@@ -11,31 +11,34 @@
 </ion-header>
 
 <ion-content>
-    <ion-item-divider ></ion-item-divider>  
+    <!-- <ion-item-divider ></ion-item-divider>   -->
 
 <ion-card>
-    <ion-segment (ionChange)="segmentChanged($event)" value="javascript">
+    <ion-segment  (ionChange)="query($event.detail.value)" value="python">
         <ion-segment-button value="python">
             <ion-label>全部</ion-label>
         </ion-segment-button>
-        <ion-segment-button >
+        <ion-segment-button value="python1" >
            <ion-label>专属会员</ion-label>
         </ion-segment-button>
-        <ion-segment-button >
+        <ion-segment-button value="python2" >
             <ion-label>正在服务</ion-label>
         </ion-segment-button>
-        <ion-segment-button >
+        <ion-segment-button  value="python3">
             <ion-label>筛选</ion-label>
         </ion-segment-button>
     </ion-segment>
 
     <ion-toolbar>
-      <ion-buttons slot="primary">
-        <ion-button (click)="clickedSearch()">
+      <ion-searchbar placeholder="搜索联系人" (ionChange)="Change($event.detail.value)" (keyup)="keyup($event)"></ion-searchbar>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="search()">
           <ion-icon slot="icon-only" name="search"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-searchbar placeholder="搜索联系人"></ion-searchbar>
+      
+     
     </ion-toolbar>
     
 <ng-container *ngFor="let item of list; index as i; ">
@@ -51,11 +54,15 @@
           <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p>
           <p class="membercontent" style="width: 200px;">{{item.levelName}}|{{item.point}}{{item.unit}}</p>
       </ion-label>
-    
-    
   </ion-item>
 
 </ng-container>
+
+<ion-infinite-scroll padding threshold="150px " (ionInfinite)="doInfinite($event)" [disabled]="!infiniteEnable">
+  <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据 ">
+  </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
   </ion-card>
 
 

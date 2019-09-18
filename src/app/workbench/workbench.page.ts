@@ -30,6 +30,7 @@ export class WorkbenchPage implements OnInit {
     }
 
     ngOnInit(){
+
         this.data.menu = this.api.getMenuList();
         console.log(this.api.getMenuList());
         let that = this;
@@ -56,6 +57,7 @@ export class WorkbenchPage implements OnInit {
           this.api.storage.get("datasource") && this.api.storage.get("datasource").then(l => {
           that.selectedDataSource = l;
          });
+         
     }
 
     compare(l) {

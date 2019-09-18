@@ -14,6 +14,7 @@ export class MemberdtlPage implements OnInit {
   beginDate: string;
   endDate: string;
   list: any = [];
+  lastOrderPay:string;
 
   constructor(  private ApiService: ApiService,
     private echart: XrEchart,
@@ -36,7 +37,17 @@ export class MemberdtlPage implements OnInit {
   }
 
 
-  
+  convertToDate(nows) {
+    const now = new Date(nows);
+    const year = now.getFullYear();
+    const month = now.getMonth() + 1;
+    const date = now.getDate();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const second = now.getSeconds();
+    return year + '-' + month + '-' + date + ' ' + hour + ':' + minute + ':' + second;
+}
+
   requestData(e, n?) {
     const t = new Reqdata();
     t.code = this.code;
@@ -48,8 +59,11 @@ export class MemberdtlPage implements OnInit {
     let n = this;
     this.requestData(a => {
       n.list=a;
+      n.lastOrderPay = this.convertToDate(n.list[0].payInfo.lastOrderPaytime);
       console.log(this.list);
     }, e);
    }
+
+
 
 }
