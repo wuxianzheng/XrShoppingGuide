@@ -1,0 +1,78 @@
+<ion-header>
+
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="white" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center style="">卡券核销</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+    <ion-card>
+        <ion-item   detail="false"  routerLink="/recommend">
+          <ion-label style="font-size: 10px;">会员手机号:</ion-label>
+          <ion-label style="font-size: 10px;">{{item.phone}}</ion-label>
+      
+       </ion-item>
+     </ion-card>
+
+     <ion-card>
+         <ion-card-content style=" width: 100%; position: relative;">
+           <p style="text-align: center;">
+             会员信息
+           </p>
+           <p style="">
+              姓名:{{item.name}}
+            </p>
+            <p style="">
+                手机号:{{item.phone}}
+            </p>
+            <p style="">
+                生日:{{item.birthMonDay}}
+            </p>
+            <p style="">
+                年龄:{{item.age}}
+            </p>
+            <ion-item-divider style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px"></ion-item-divider>
+            <p style="color: red;">
+                等级:{{item.vipLevelName}}
+            </p>
+            <p style="color: red;">
+                积分:{{item.point}}{{item.pointName}}
+            </p>
+         </ion-card-content>
+     </ion-card>
+
+     <ng-container *ngFor="let itemt of list; index as i; ">
+
+     <ion-card>
+        <ion-card-content style=" width: 100%; position: relative;">
+            <p style="text-align: right;">
+              No:{{itemt.customerCoupon.barCode}}
+            </p>
+            <p style=" color:red;font-size:19px;">
+                {{itemt.coupon.couponValue}}元优惠券
+             </p>
+             <p style="font-size:19px;">
+                 消费满{{itemt.coupon.orderLimitValue}}元立减
+             </p>
+             <p style="font-size:12px;">
+               优惠券名:{{itemt.coupon.couponName}}
+             </p>
+             <p style="font-size:12px;">
+                 有效期：{{itemt.coupon.startTime}}{{itemt.coupon.endTime}}
+             </p>
+            
+             <p style="font-size:12px;">
+                 使用限制:{{itemt.coupon.couponDescription}}
+             </p>
+             
+          </ion-card-content>
+     </ion-card>
+    </ng-container>
+
+</ion-content>

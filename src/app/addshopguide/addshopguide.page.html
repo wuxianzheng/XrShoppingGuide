@@ -12,7 +12,7 @@
 
 <!-- Inputs with labels -->
 <ion-item>
-    <ion-label position="floating"> 名称</ion-label>
+    <ion-label position="floating"> 姓名</ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
@@ -27,7 +27,28 @@
        <ion-label position="floating"> 导购微信</ion-label>
       <ion-input></ion-input>
   </ion-item>
-  
+  <ion-item>
+      <ion-label position="floating">*选择门店</ion-label>
+      <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <!-- <ion-label position="floating">*服务顾问职位</ion-label> -->
+     <div class="item item-input item-select">
+        <select>
+          <option>店长</option>
+          <option>店员</option>
+        </select>
+       </div>
+  </ion-item>
+  <!-- <ion-select  selectedText="{{seclectedCountry}}" >
+        <ion-option *ngFor="let num of country" (ionSelect)="selectNumber(num)" value={{num.value}}>
+            {{num.title}}   {{num.value}}</ion-option>
+   </ion-select>
+     selectNumber(num) {
+        this.seclectedCountry = num.value;
+     } -->
+
+
   <ion-item>
     <ion-label position="stacked">Summary</ion-label>
     <ion-textarea

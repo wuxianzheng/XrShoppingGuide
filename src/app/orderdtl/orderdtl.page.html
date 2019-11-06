@@ -14,7 +14,7 @@
   </ion-toolbar>
 
   <!-- [(ngModel)]="category" (ngModelChange)="query()" -->
-  <ion-segment (ionChange)="segmentChanged($event)" value="python">
+  <ion-segment value="python">
         <ion-segment-button value="python">
         <ion-label>订单详情</ion-label>
         </ion-segment-button>
@@ -86,8 +86,8 @@
                             <p class=""  style="float: right;">￥{{item.orderVo.orderItemList[0].allPrice}}元</p>
                     </ion-label>
               </ion-item>
-             <ion-item style="float: right;"> 
-                    <ion-label >
+             <ion-item > 
+                    <ion-label style="text-align: right;">
                         <p class="membertop"> <span >商品总价&nbsp; </span>:{{item.orderVo.orderItemList[0].allPrice}}</p>
                         <p class="membertop"> <span >优惠 &nbsp;</span>:{{item.orderVo.orderItemList[0].refundPostfee}}</p>
                         <p class="membertop"> <span >运费&nbsp;</span>:{{item.orderVo.orderItemList[0].refundPostfee}}</p>
@@ -95,11 +95,13 @@
                     </ion-label>
              </ion-item>
                  
+             <ion-segment-button layout="icon-bottom" style="background:rgb(30, 33, 36);border-style:none;">
+                <ion-icon name="call" style="color: white;" ></ion-icon>
+                <ion-label style="color: white;">联系买家</ion-label>
+           </ion-segment-button> 
+           
         </ion-card>
     </ng-container>
 
-    <ion-segment-button layout="icon-bottom" style="background:rgb(30, 33, 36);border-style:none;">
-         <ion-icon name="call" style="color: white;" ></ion-icon>
-         <ion-label style="color: white;">联系客户</ion-label>
-    </ion-segment-button>    
+      
 </ion-content>

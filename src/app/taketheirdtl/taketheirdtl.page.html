@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon color="white" name="ios-arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title text-center style="">订单自提</ion-title>
+    </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    
+    <ion-card>
+        <ion-item   detail="false"  routerLink="/recommend">
+          <ion-label style="font-size: 10px;">会员手机号:</ion-label>
+          <ion-label style="font-size: 10px;">{{item.phone}}</ion-label>
+      
+       </ion-item>
+     </ion-card>
+
+     <ion-card>
+         <ion-card-content style=" width: 100%; position: relative;">
+           <p style="text-align: center;">
+             会员信息
+           </p>
+           <p style="">
+              姓名:{{item.name}}
+            </p>
+            <p style="">
+                手机号:{{item.phone}}
+            </p>
+            <p style="">
+                生日:{{item.birthMonDay}}
+            </p>
+            <p style="">
+                年龄:{{item.age}}
+            </p>
+            <ion-item-divider style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+            <p style="">
+                等级:<span style="color: red;">{{item.vipLevelName}}</span>
+            </p>
+            <p style="">
+                积分:<span  style="color: red;">{{item.point}}{{item.pointName}}</span>
+            </p>
+         </ion-card-content>
+     </ion-card>
+     <p style="margin-left: 10%;">
+        {{coutorder}}笔订单总共{{coutorder}}件商品
+      </p>
+     <ng-container *ngFor="let itemt of list; index as i;">
+     <ion-card>
+        <ion-card-content style=" width: 100%; position: relative;">
+          <div> 
+            <p style="text-align: left;float: left;">
+              订单号{{itemt.customerOrder.code}}
+            </p> 
+            <p class="tihuo">提货</p>
+          </div>
+            <ion-item-divider style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+            <ion-item   detail="false"  >
+                <ion-avatar slot="start">
+                        <ion-img [src]="itemt.orderItemList[0].productPicUrl"></ion-img>
+                  </ion-avatar>
+                  <ion-label>
+                      <p class="membertop">{{itemt.orderItemList[0].productName}}</p>
+                  </ion-label>
+                  <ion-label class="right">
+                      <!-- <p class="membertop">{{itemt.orderItemList[0].productName}}</p> -->
+                      <p class="membertop" style="text-align: right;">￥{{itemt.orderItemList[0].price}}</p>
+                      <p class="membercontent" style="text-align: right;">{{itemt.orderItemList[0].shoppingCount}}</p>
+                </ion-label>
+          </ion-item>
+           
+          </ion-card-content>
+     </ion-card>
+    </ng-container>
+
+</ion-content>
