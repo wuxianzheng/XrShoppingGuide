@@ -28,7 +28,7 @@
 <ion-content>
     <ng-container *ngFor="let item of list; index as i; ">
     <ion-card>
-        <ion-item   detail="false" (click)="showdetail(item.customerOrder.id)" >
+        <ion-item  mode="ios"  detail="false" (click)="showdetail(item.customerOrder.id)" >
 
           <ion-avatar slot="start">
                 <ion-img [src]="item.customer.avatar"></ion-img>
@@ -60,7 +60,7 @@
           </ion-label>
         </ion-card-content>
 
-        <ion-item   detail="false" >
+        <ion-item lines="none"   detail="false" >
             <ion-label>
                 <p class="membertop">联系买家</p>
             </ion-label>

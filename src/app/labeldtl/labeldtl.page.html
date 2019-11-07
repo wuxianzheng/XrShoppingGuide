@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>标签详情</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+
+    <ng-container *ngFor="let item of tagVoList; index as i; ">
+        <ion-label >
+           <p class="fontweight" style="margin-left: 10px;">{{item.tagSortName}}</p>
+           <ion-button    color="light" size="small" >{{item.name}}{{tagVoList[i]}}</ion-button> 
+        </ion-label>
+        <ion-item-divider style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+    </ng-container>
+
+
+
+
+
+</ion-content>

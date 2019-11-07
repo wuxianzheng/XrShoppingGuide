@@ -27,7 +27,8 @@ const routes: Routes = [
   { path: 'taketheir', loadChildren: './taketheir/taketheir.module#TaketheirPageModule' },
   { path: 'chargeoff', loadChildren: './chargeoff/chargeoff.module#ChargeoffPageModule' },
   { path: 'chargeoffdtl', loadChildren: './chargeoffdtl/chargeoffdtl.module#ChargeoffdtlPageModule' },
-  { path: 'taketheirdtl', loadChildren: './taketheirdtl/taketheirdtl.module#TaketheirdtlPageModule' }
+  { path: 'taketheirdtl', loadChildren: './taketheirdtl/taketheirdtl.module#TaketheirdtlPageModule' },
+  { path: 'labeldtl', loadChildren: './labeldtl/labeldtl.module#LabeldtlPageModule' }
 
 ];
 @NgModule({

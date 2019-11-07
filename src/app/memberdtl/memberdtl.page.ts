@@ -14,6 +14,8 @@ export class MemberdtlPage implements OnInit {
   beginDate: string;
   endDate: string;
   list: any = [];
+  codelist: any;
+  tagVoList: any=[];
   lastOrderPay:string;
 
   constructor(  private ApiService: ApiService,
@@ -59,10 +61,32 @@ export class MemberdtlPage implements OnInit {
     let n = this;
     this.requestData(a => {
       n.list=a;
+      n.tagVoList=a[0]['tagVoList'];
       n.lastOrderPay = this.convertToDate(n.list[0].payInfo.lastOrderPaytime);
-      console.log(this.list);
+      console.log(n.tagVoList);
     }, e);
    }
+ 
+   topage(type: string,vcode:any) {
+    if (type === 'labeldtl'){
+        this.router.navigate(['/labeldtl'], {
+            queryParams: {
+              codelist:JSON.stringify(this.tagVoList)
+            }
+        });
+      }
+
+    if (type === 'dkdx'){
+        this.router.navigate(['/product-dkdx'], {
+        //this.navCtrl.navigateForward('/product-dkdx', {
+            queryParams: {
+                code: vcode,
+                beginDate: this.beginDate,
+                endDate: this.endDate
+            }
+        });
+      }
+}
 
 
 
