@@ -32,7 +32,7 @@
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的业绩</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
     </ion-item>
-    <ion-item (click)="launch()" detail="true">
+     <ion-item detail="true" routerLink="/orderlist"> <!--(click)="launch()" -->
         <ion-icon name="list-box" class="iconfont " item-left style="color:#3880ff;"></ion-icon>
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的订单</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
@@ -53,7 +53,7 @@
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;预约管理</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
     </ion-item>
-    <ion-item  detail="true" routerLink="/about">
+    <ion-item  detail="true" routerLink="/chargeoff">
         <ion-icon name="paper" class="iconfont" item-left style="color:#3880ff;" ></ion-icon>
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;手动核销</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
@@ -68,7 +68,7 @@
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;我的二维码</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
     </ion-item>
-    <ion-item  detail="true" routerLink="/about">
+    <ion-item  detail="true" lines="none"   routerLink="/about">
         <ion-icon name="bulb" class="iconfont " item-left style="color:#3880ff;" ></ion-icon>
         <ion-label style="font-size: 15px;">&nbsp;&nbsp;&nbsp;活动效果</ion-label>
         <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->

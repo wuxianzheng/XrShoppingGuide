@@ -83,5 +83,17 @@ export class TaketheirdtlPage implements OnInit {
     window.history.back();
   }
 
+  topage(type: string,vcode:any) {
+    if (type === 'discountcoupondtl'){
+      this.ApiService.toastCtrl.show("测试提货");
+        // this.router.navigate(['/discountcoupondtl'], {
+        //     queryParams: {
+        //      codelist:JSON.stringify(this.list),
+        //      code: vcode,
+        //     }
+        // });
+      }
+    }
+
 
 }

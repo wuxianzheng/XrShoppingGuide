@@ -1,0 +1,45 @@
+﻿{
+	"ecode": "1000",
+	"msg": "成功",
+	"data": {
+		"member": {
+			"myRank": 101,
+			"top3": [{
+				"identify": "54_561654639_2_3_0_all",
+				"employeeId": 561654639,
+				"name": "林春华",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpFicNOkshbicq7LffVdoojkdJc7yn5H2l86pjO1Zib3H00nw/",
+				"num": 11,
+				"rank": 1,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}]
+		},
+		"saler": {
+			"myRank": 101,
+			"top3": []
+		},
+		"fans": {
+			"myRank": 2,
+			"top3": [{
+				"identify": "54_561654639_2_2_0_all",
+				"employeeId": 561654639,
+				"name": "林春华",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpFicNOkshbicq7LffVdoojkdJc7yn5H2l86pjO1Zib3H00nw/",
+				"num": 7,
+				"rank": 1,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}, {
+				"identify": "54_561710768_2_2_0_all",
+				"employeeId": 561710768,
+				"name": "无限政",
+				"headImgUrl": "https://wework.qpic.cn/bizmail/o408AHk9v7DRzgPICaZfS4y8vwwcsiaMibQK5NAVxWuwGOCFuZaNxib9g/0",
+				"num": 1,
+				"rank": 2,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}]
+		}
+	}
+}

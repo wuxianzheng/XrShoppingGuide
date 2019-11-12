@@ -9,117 +9,36 @@
 <ion-content style="--background:#f5f5f5">
 
       <ion-grid >
-          <ion-row class="ionitemflot"> 
+       <ng-container *ngFor="let item of list; index as i; ">
+          <ion-row class="ionitemflot"  > 
               <ion-col style="align-items: flex-end;">
                 
-                  <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
+               <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
                       <img src="assets/imgs/icon_boy.png" />
                   </ion-avatar> -->
                   <ion-label>
-                      <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
+                      <!-- <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
                           <img src="assets/imgs/icon_boy.png" />
-                      </ion-avatar> 
-                      <p style="text-align: center;">姓名</p>
-                      <p style="text-align: center;">这个家伙很懒，</p>
-                      
+                      </ion-avatar>  -->
+                      <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
+                            <ion-img [src]="item.portrait"></ion-img>
+                          </ion-avatar>
+                      <p style="text-align: center;" *ngIf="item.type==3">{{item.name}}-店长</p>
+                      <p style="text-align: center;" *ngIf="item.type==2">{{item.name}}-导购</p>
+                      <p style="text-align: center;" *ngIf="item.signature!=''">{{item.signature}}</p>
+                      <p style="text-align: center;" *ngIf="item.signature==''">这个家伙很懒</p>
                   </ion-label>
-                  <ion-button expand="block" style="width: 68px;height: 26px; margin-left: 25%; " >
+                  <ion-button  size="small" style=" margin-left: 30%;" >
                     已关注</ion-button>
-                
+                    <ion-item-divider  style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+                    <ion-button style="float: left;"    color="light" size="small" *ngIf="item.type==3">分配会员</ion-button> 
+                    <ion-button style="float: left;"    color="light" size="small"  *ngIf="item.type==2">离职</ion-button> 
+                    <ion-button   style="float: right;"  color="light" size="small" >拨打电话</ion-button> 
               </ion-col>
         </ion-row>
-
-          <ion-row class="ionitemflot"> 
-                <ion-col style="align-items: flex-end;">
-                  
-                    <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
-                        <img src="assets/imgs/icon_boy.png" />
-                    </ion-avatar> -->
-                    <ion-label>
-                        <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
-                            <img src="assets/imgs/icon_boy.png" />
-                        </ion-avatar> 
-                        <p style="text-align: center;">姓名</p>
-                        <p style="text-align: center;">这个家伙很懒，</p>
-                        
-                    </ion-label>
-                    <ion-button expand="block" style="width: 68px;height: 26px; margin-left: 25%; " >
-                      已关注</ion-button>
-                  
-                </ion-col>
-          </ion-row>
-
-
-
-          <ion-row class="ionitemflot"> 
-              <ion-col style="align-items: flex-end;">
-                
-                  <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
-                      <img src="assets/imgs/icon_boy.png" />
-                  </ion-avatar> -->
-                  <ion-label>
-                      <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
-                          <img src="assets/imgs/icon_boy.png" />
-                      </ion-avatar> 
-                      <p style="text-align: center;">姓名</p>
-                      <p style="text-align: center;">这个家伙很懒，</p>
-                      
-                  </ion-label>
-                  <ion-button expand="block" style="width: 68px;height: 26px; margin-left: 25%; " >
-                    已关注</ion-button>
-                
-              </ion-col>
-        </ion-row>
-
-        <ion-row class="ionitemflot"> 
-            <ion-col style="align-items: flex-end;">
-              
-                <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
-                    <img src="assets/imgs/icon_boy.png" />
-                </ion-avatar> -->
-                <ion-label>
-                    <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
-                        <img src="assets/imgs/icon_boy.png" />
-                    </ion-avatar> 
-                    <p style="text-align: center;">姓名</p>
-                    <p style="text-align: center;">这个家伙很懒，</p>
-                    
-                </ion-label>
-                <ion-button expand="block" style="width: 68px;height: 26px; margin-left: 25%; " >
-                  已关注</ion-button>
-              
-            </ion-col>
-      </ion-row>
-       
-
-      <ion-row class="ionitemflot"> 
-          <ion-col style="align-items: flex-end;">
-            
-              <!-- <ion-avatar slot="start"  style="width: 80px;height: 80px">
-                  <img src="assets/imgs/icon_boy.png" />
-              </ion-avatar> -->
-              <ion-label>
-                  <ion-avatar slot="start"  style="width: 48px;height: 48px; margin-left: 36%;">
-                      <img src="assets/imgs/icon_boy.png" />
-                  </ion-avatar> 
-                  <p style="text-align: center;">姓名</p>
-                  <p style="text-align: center;">这个家伙很懒，</p>
-                  
-              </ion-label>
-              <ion-button expand="block" style="width: 68px;height: 26px; margin-left: 25%; " >
-                已关注</ion-button>
-            
-          </ion-col>
-    </ion-row>
-
-
+      </ng-container>
 
       </ion-grid>
-
-
-
-
-
 
 
 </ion-content>

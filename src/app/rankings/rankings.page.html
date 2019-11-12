@@ -1,12 +1,11 @@
 <ion-header>
 
-    
     <!-- Segment with default selection -->
-    <ion-segment value="javascript">
-        <ion-segment-button value="python">
+    <ion-segment  (ionChange)="query2($event.detail.value)" value="bd">
+        <ion-segment-button value="bd">
         <ion-label>本店排行</ion-label>
         </ion-segment-button>
-        <ion-segment-button value="javascript">
+        <ion-segment-button value="qg">
         <ion-label>全国排行</ion-label>
         </ion-segment-button>
     </ion-segment>
@@ -18,55 +17,62 @@
         <!-- <ion-item-divider style=""></ion-item-divider> -->
   
         <ion-card>
-           <ion-item   detail="true"  routerLink="/recommend">
-             <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的排名:101</ion-label>
-             <ion-label style="font-size: 10px;text-align: right;">&nbsp;&nbsp;&nbsp;全部排行</ion-label>
-             <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
-          </ion-item>
-            <ion-card-content style="height: 126px; width: 100%; position: relative;">
-                    <ion-avatar slot="start"  class="ion_contentsides">
-                      <img src="assets/imgs/icon_boy.png" />
-                      <span class="item-title">姓名3 </span>
-                    </ion-avatar>
+            <ion-item   detail="true" (click)="topage('rankingsdtl','fans')">
+                    <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的排名:{{fanslist.myRank}}</ion-label>
+                    粉丝榜
+                    <ion-label style="font-size: 10px;text-align: right;">&nbsp;&nbsp;&nbsp;全部排行</ion-label>
+                    <!-- <ion-icon color="gray " name="ios-arrow-forward"></ion-icon> -->
+            </ion-item>
+             <ion-card-content style="height: 126px; width: 100%; position: relative;">
+                    <ng-container *ngFor="let item of fanslist['top3']; index as i; ">   
+                       <ion-avatar slot="start" *ngIf="i==1"  class="ion_contentsides">
+                            <ion-img [src]="item.headImgUrl"></ion-img>
+                            <span class="item-title">{{item.name}}</span>
+                        </ion-avatar>
 
-                    <ion-avatar slot="start" class="ion_contentmiddle" style="position: absolute;left: 22%;" >
-                          <img src="assets/imgs/icon_boy.png" />
-                          <span class="item-title">姓名3 </span>
-                    </ion-avatar>
-
-                    <ion-avatar slot="start" class="ion_contentsidesright" >
-                        <img src="assets/imgs/icon_boy.png" />
-                        <span class="item-title">姓名3 </span>
-                    </ion-avatar>
+                        <ion-avatar *ngIf="i==0"  slot="start" class="ion_contentmiddle" style="position: absolute;left: 22%;" >
+                            <ion-img [src]="item.headImgUrl" ></ion-img>
+                            <span class="item-title">{{item.name}}</span>
+                        </ion-avatar>
+                     
+                        <ion-avatar slot="start" *ngIf="i==2" class="ion_contentsidesright">
+                            <ion-img [src]="item.headImgUrl" ></ion-img>
+                            <span class="item-title">{{item.name}}</span>
+                        </ion-avatar>
+                    </ng-container>
+                        <!-- <ion-avatar slot="start" class="" >
+                            <img src="assets/imgs/icon_boy.png" />
+                        </ion-avatar> -->
             </ion-card-content>
         </ion-card>
          
 
         <ion-card>
-                <ion-item   detail="true"  routerLink="/recommend">
-                    <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的排名:101</ion-label>
-                    <ion-label style="font-size: 10px;text-align: right;">&nbsp;&nbsp;&nbsp;全部排行</ion-label>
-                    <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
-                 </ion-item>
-                <ion-card-content style="height: 126px;  position: relative;" >
-                     <ion-avatar slot="start" class="ion_contentsides" >
-                          <img src="assets/imgs/icon_boy.png" />
-                          <span class="item-title">姓名3 </span>
+            <ion-item   detail="true" (click)="topage('rankingsdtl','member')"  >
+                <ion-label style="font-size: 10px;">&nbsp;&nbsp;&nbsp;我的排名:{{memberlist.myRank}}</ion-label>
+                 会员榜
+                <ion-label style="font-size: 10px;text-align: right;">&nbsp;&nbsp;&nbsp;全部排行</ion-label>
+                <!--<ion-icon color="gray " name="ios-arrow-forward"></ion-icon>-->
+            </ion-item>
+             <ion-card-content style="height: 126px;  position: relative;" >
+                <ng-container *ngFor="let item of memberlist['top3']; index as i; ">
+                    <ion-avatar slot="start" *ngIf="i==1"  class="ion_contentsides" >
+                        <ion-img [src]="item.headImgUrl"></ion-img>
+                        <span class="item-title">{{item.name}}</span>
                       </ion-avatar>
 
-                     <ion-avatar slot="start" class="ion_contentmiddle" style="position: absolute;left: 22%;" > 
-                          <img src="assets/imgs/icon_boy.png" />
-                          <span class="item-title">姓名1 </span>
+                     <ion-avatar slot="start" *ngIf="i==0"  class="ion_contentmiddle" style="position: absolute;left: 22%;" > 
+                        <ion-img [src]="item.headImgUrl"></ion-img>
+                        <span class="item-title">{{item.name}}</span>
                      </ion-avatar>
 
-                     <ion-avatar slot="start" class="ion_contentsidesright" >
-                           <img src="assets/imgs/icon_boy.png" />
-                           <span class="item-title">姓名2 </span>
+                     <ion-avatar slot="start" *ngIf="i==2"  class="ion_contentsidesright" >
+                        <!-- <img src="assets/imgs/icon_boy.png" /> -->
+                        <ion-img [src]="item.headImgUrl"></ion-img>
+                        <span class="item-title">{{item.name}}</span>
                      </ion-avatar>
-
-                </ion-card-content>
+                </ng-container>
+            </ion-card-content>
          </ion-card>
-        
-                
 
 </ion-content>

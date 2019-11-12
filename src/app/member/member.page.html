@@ -42,21 +42,18 @@
     </ion-toolbar>
     
 <ng-container *ngFor="let item of list; index as i; ">
-
    <ion-item  detail="true" (click)="showdetail(item?.id)"> <!--routerLink="/memberdtl"> -->
-   
       <ion-avatar slot="start">
         <ion-img [src]="item.customerVo.avatar"></ion-img>
       </ion-avatar>
-
       <ion-label style="width: 300px;">
           <p *ngIf="item.customerVo.realName==null" class="membertop" style="width: 200px;" >{{item.customerVo.name}}</p>
           <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p>
           <p class="membercontent" style="width: 200px;">{{item.levelName}}|{{item.point}}{{item.unit}}</p>
       </ion-label>
   </ion-item>
-
 </ng-container>
+
 
 <ion-infinite-scroll padding threshold="150px " (ionInfinite)="doInfinite($event)" [disabled]="!infiniteEnable">
   <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据 ">

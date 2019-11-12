@@ -26,7 +26,6 @@
     </ion-slides> -->
 
     <ion-item-divider style="--background: rgb(230, 230, 230) ;height: 10px;min-height: 0px"></ion-item-divider>
-
     <ng-container *ngFor="let item of data.menu">
         <ion-grid>
             <ion-row>
@@ -35,7 +34,6 @@
                     <img src="assets/imgs/line.png" style="margin-bottom: 4px;">
                 </ion-col>
             </ion-row>
-
             <ion-row>
                 <ion-col size="3" text-center *ngFor="let sub of item.sub" (click)="toPage(sub)">
                     <ion-icon [style.color]="sub.color" class="iconfont {{sub.iconName}}" style="font-size:45px;height:60px">

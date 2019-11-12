@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>排行详情</ion-title>
+  </ion-toolbar>
+  <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" (ionChange) ="query($event.detail.value)" value="all">
+      <ion-segment-button style="min-width: 0;" value='all'>
+          <div class="segment-border">总排行</div>
+      </ion-segment-button>
+      <ion-segment-button style="min-width: 0;" value='lastweek'>
+          <div class="segment-border">上周</div>
+      </ion-segment-button>
+      <ion-segment-button style="min-width: 0;" value='lastmonth'>
+          <div class="segment-border">上月</div>
+      </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+
+    <ng-container *ngFor="let item of objlist['list']; index as i; ">
+        <ion-item  detail="flase" (click)="showdetail(item?.id)"> <!--routerLink="/memberdtl"> -->
+          <ion-avatar slot="start">
+            <ion-img [src]="item.headImgUrl"></ion-img>
+          </ion-avatar>
+          <ion-label style="width: 300px;">
+              <p  style="width: 200px;" >{{item.name}}</p>
+              <!-- <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p>
+              <p class="membercontent" style="width: 200px;">{{item.levelName}}|{{item.point}}{{item.unit}}</p> -->
+          </ion-label>
+      </ion-item>
+    </ng-container>
+    
+    <ion-infinite-scroll padding threshold="150px " (ionInfinite)="doInfinite($event)" [disabled]="!infiniteEnable">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据 ">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

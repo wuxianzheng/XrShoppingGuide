@@ -58,8 +58,8 @@
             "procId": "",
             "category": 0,
             "page": "Performance",
-            "color": "#ffc006",
-            "name": "业绩排行1",
+            "color": "#6099FF",
+            "name": "业绩排行测试",
             "iconName": "icon-icon_testable",
             "checked": false
           },
@@ -86,7 +86,32 @@
             "page": "goodslist",
             "color": "#1fcdf8",
             "name": "商品",
+            "iconName": "icon-shangpinpaiming",
+            "checked": false
+          },
+          {
+            "id": "6fcdb6ae79f04588a3ea4c706d78a4eb",
+            "parentId": "10413e2643b911e89e2600163e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "Taketheir",
+            "color": "#6099ff",
+            "name": "订单自提",
             "iconName": "icon-icon_venuenotice",
+            "checked": false
+          },{
+            "id": "cb19022543b811e89e2600163e08596b",
+            "parentId": "c1d6e56243b811e89e2600163e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "chargeoff",
+            "color": "#ff983c",
+            "name": "卡券核销",
+            "iconName": "icon-huiyuanyongquan",
             "checked": false
           },
           {
@@ -103,31 +128,6 @@
             "checked": false
           },
           {
-            "id": "6fcdb6ae79f04588a3ea4c706d78a4eb",
-            "parentId": "10413e2643b911e89e2600163e08596b",
-            "system": true,
-            "sub": [],
-            "procId": "",
-            "category": 0,
-            "page": "Taketheir",
-            "color": "#6099ff",
-            "name": "订单自提",
-            "iconName": "icon-shangpinpaiming",
-            "checked": false
-          },{
-            "id": "cb19022543b811e89e2600163e08596b",
-            "parentId": "c1d6e56243b811e89e2600163e08596b",
-            "system": true,
-            "sub": [],
-            "procId": "",
-            "category": 0,
-            "page": "chargeoff",
-            "color": "#ff983c",
-            "name": "卡券核销",
-            "iconName": "icon-daogoupaiming",
-            "checked": false
-          },
-          {
             "id": "cba8337443b811e89e2600163e08596b",
             "parentId": "c1d6e56243b811e89e2600163e08596b",
             "system": true,
@@ -136,8 +136,34 @@
             "category": 0,
             "page": "productrankings",
             "color": "#0acfd3",
-            "name": "00",
-            "iconName": "icon-shangpinpaiming",
+            "name": "退货",
+            "iconName": "icon-huiyuanfugou",
+            "checked": false
+          },
+          {
+            "id": "cba8337443b811e89e2600163e08596b",
+            "parentId": "c1d6e56243b811e89e2600263e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "productrankings",
+            "color": "#0acfd3",
+            "name": "测试一",
+            "iconName": "icon-tuijianshiyong",
+            "checked": false
+          },
+          {
+            "id": "cba8337443b811e89e2600163e08596b",
+            "parentId": "c1d6e56243b811e89e2600363e08596b",
+            "system": true,
+            "sub": [],
+            "procId": "",
+            "category": 0,
+            "page": "productrankings",
+            "color": "#0acfd3",
+            "name": "测试二",
+            "iconName": "icon-yanzhengma",
             "checked": false
           }
         ],

@@ -7,23 +7,25 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
-
 @Component({
-  selector: 'app-member',
-  templateUrl: './member.page.html',
-  styleUrls: ['./member.page.scss'],
+  selector: 'app-rankingsdtl',
+  templateUrl: './rankingsdtl.page.html',
+  styleUrls: ['./rankingsdtl.page.scss'],
 })
-export class MemberPage implements OnInit {
+export class RankingsdtlPage implements OnInit {
 
   list: any = [];
+  objlist: any = '';
+  
   code: string = "";
+  type:string = "";
   pageNum: number;
   infiniteEnable: boolean;
   beginDate: string;
   endDate: string;
   searchstr: string = "";
 
-  constructor( private readonly router: Router,
+  constructor(private readonly router: Router,
     private activated: ActivatedRoute,
     private alertCtrl: AlertController,
     private actionSheetCtrl: ActionSheetController,
@@ -33,9 +35,26 @@ export class MemberPage implements OnInit {
     private barcode: BarcodeScanner) { }
 
   ngOnInit() {
+    this.activated.queryParams.subscribe((params: Params) => {
+       this.code=params["code"];
+       this.type=params["type"];
+    });
+    console.log(this.type);
+    console.log(this.code);
     this.query();
   }
-
+  
+  query(e?){
+    let n = this;
+    this.pageNum = 1;
+    this.code = this.code;
+    this.type = this.type;
+    this.infiniteEnable = true;
+    this.requestData(a => {
+          n.objlist=a;
+          n.pageNum++;
+    }, e);
+  }
   
   requestData(e, n?) {
     // if ("" == this.code) {
@@ -43,70 +62,22 @@ export class MemberPage implements OnInit {
     //     if (n) n.target.complete();
     //     return;
     // }
-    // if (this.code.length > 50) {
-    //     this.api.toastCtrl.show("搜索内容太长，请查询50个字符以内的数据");
-    //     if (n) n.target.complete();
-    //     return;
-    // }
     const t = new Reqdata();
     t.pageNum = this.pageNum;
     t.code = this.code;
-    t.mode = 'member';
+    t.type = this.type;
+    if(t.type=="qg"){
+      t.mode = 'rankingsdtl_qg';
+    }else if(t.type=="bd"){
+      t.mode = 'rankingsdtl_bd';
+    }
     this.api.requestData(t, e);
-    // this.api.requestData(t,function (e) {
-    //     n.data = e;
-    //   });
-}
-
-  //输入框每次改变后获取输入框内的值
-  Change(e) {
-    this.searchstr=e;
   }
-
-  //单击按钮触发事件
-  search() {
-    console.log(this.searchstr);
-  }
-  //回车触发事件
-  keyup(e){
-     if (e.keyCode == 13) {
-        console.log(this.searchstr);
-       }
-  }
-
-  query(e?){
-    let n = this;
-    this.pageNum = 1;
-    this.infiniteEnable = true;
-    this.requestData(a => {
-      if (a['list'].length > 0) {
-          n.list=a['list'];
-          console.log(this.list);
-          n.pageNum++;
-        }
-        else{
-            n.list.length = 0;
-        }
-    }, e);
-  }
-
-  query2(e?){
-   console.log(e);
-   }
-   
-  showdetail(vcode: string) {
-    // alert('detail' + rowno);
-     this.router.navigate(['/memberdtl'], {
-         queryParams: {
-             code: vcode,
-             //beginDate: this.beginDate,
-             //endDate: this.endDate
-         }
-     });
-   }
 
   back() {
     window.history.back();
   }
+
+
 
 }

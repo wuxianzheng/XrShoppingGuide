@@ -30,7 +30,8 @@ const routes: Routes = [
   { path: 'taketheirdtl', loadChildren: './taketheirdtl/taketheirdtl.module#TaketheirdtlPageModule' },
   { path: 'labeldtl', loadChildren: './labeldtl/labeldtl.module#LabeldtlPageModule' },
   { path: 'discountcoupondtl', loadChildren: './discountcoupondtl/discountcoupondtl.module#DiscountcoupondtlPageModule' },
-  { path: 'discountcoupon', loadChildren: './discountcoupon/discountcoupon.module#DiscountcouponPageModule' }
+  { path: 'discountcoupon', loadChildren: './discountcoupon/discountcoupon.module#DiscountcouponPageModule' },
+  { path: 'rankingsdtl', loadChildren: './rankingsdtl/rankingsdtl.module#RankingsdtlPageModule' }
 
 ];
 @NgModule({

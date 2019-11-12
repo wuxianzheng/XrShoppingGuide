@@ -1,0 +1,72 @@
+﻿{
+	"ecode": "1000",
+	"msg": "成功",
+	"data": {
+		"member": {
+			"myRank": 101,
+			"top3": [{
+				"identify": "54_561659076_3_3_0_all",
+				"employeeId": 561659076,
+				"name": "赵水清",
+				"headImgUrl": "https://p.qlogo.cn/bizmail/gRaFOJSGbVUlkFkVAhjmDEAgg8OsquqcZ4vHOXAo6g9awcCUmz0WFQ/0",
+				"num": 122,
+				"rank": 1,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}, {
+				"identify": "54_561656468_3_3_0_all",
+				"employeeId": 561656468,
+				"name": "邓洁珍",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpGYXaR6Z0lfyTxVxnkYPIyuyFOJtHm63uc1hO6y2qKO3g/",
+				"num": 110,
+				"rank": 2,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}, {
+				"identify": "54_561655214_3_3_0_all",
+				"employeeId": 561655214,
+				"name": "陆秀樱",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpENibmFyu7RFJJFZuJgmiaLLkkEIc8Ox7IkUsazOAqkib90A/",
+				"num": 106,
+				"rank": 3,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}]
+		},
+		"saler": {
+			"myRank": 101,
+			"top3": []
+		},
+		"fans": {
+			"myRank": 101,
+			"top3": [{
+				"identify": "54_561659076_3_2_0_all",
+				"employeeId": 561659076,
+				"name": "赵水清",
+				"headImgUrl": "https://p.qlogo.cn/bizmail/gRaFOJSGbVUlkFkVAhjmDEAgg8OsquqcZ4vHOXAo6g9awcCUmz0WFQ/0",
+				"num": 123,
+				"rank": 1,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}, {
+				"identify": "54_561655214_3_2_0_all",
+				"employeeId": 561655214,
+				"name": "陆秀樱",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpENibmFyu7RFJJFZuJgmiaLLkkEIc8Ox7IkUsazOAqkib90A/",
+				"num": 114,
+				"rank": 2,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}, {
+				"identify": "54_561656468_3_2_0_all",
+				"employeeId": 561656468,
+				"name": "邓洁珍",
+				"headImgUrl": "https://shp.qpic.cn/bizmp/WcP9jdR3DpGYXaR6Z0lfyTxVxnkYPIyuyFOJtHm63uc1hO6y2qKO3g/",
+				"num": 113,
+				"rank": 3,
+				"likeNum": 0,
+				"todayIsLiked": 0
+			}]
+		}
+	}
+}

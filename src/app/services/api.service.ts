@@ -677,6 +677,7 @@ getRequestContact(): Observable<any>{
 
 export class Reqdata {
   category: string;
+  type: string;
   tm: number;
   code: string;
   mode: string;
