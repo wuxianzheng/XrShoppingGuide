@@ -76,8 +76,8 @@ export class MemberdtlPage implements OnInit {
         });
       }
 
-    if (type === 'dkdx'){
-        this.router.navigate(['/product-dkdx'], {
+    if (type === 'discountcoupon'){
+        this.router.navigate(['/discountcoupon'], {
         //this.navCtrl.navigateForward('/product-dkdx', {
             queryParams: {
                 code: vcode,

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>剩余优惠券</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ng-container *ngFor="let item of list; index as i; ">
+        <ion-grid class="item-grid ">
+            <ion-row class="item-border ">
+                <ion-col class="col"  text-left style="width: 10%;">
+                    <span class="item-title" style="color: red; text-align: center;">¥{{item?.coupon.couponValue}}</span><br/>
+                    <span  class="item-title">满{{item?.coupon.orderLimitValue}}使用商城<br/>，门店使用</span>
+                </ion-col>
+               
+                <ion-col class="col" text-right style="border-left: 1px dotted rgb(114, 114, 114);width: 90%;">
+                    <span  class="item-title">{{item.coupon.couponType}}{{item.coupon.couponName}}</span><br/>
+                    <span  class="item-title">{{item.coupon.gmtCreate}}~{{item.coupon.gmtUpdate}}</span>
+                    <ion-button size="small" (click)="topage('discountcoupondtl',item.coupon.id)"  >查看详情</ion-button> 
+                </ion-col>
+            </ion-row>
+            <!-- <img *ngIf="image.index==1 || i==0" [src]="image.thumbnailUrl" style="height: 100px; margin-top: -25px;" /> -->
+        </ion-grid>
+
+         
+    </ng-container>
+</ion-content>

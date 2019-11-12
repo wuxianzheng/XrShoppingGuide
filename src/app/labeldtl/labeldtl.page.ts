@@ -11,6 +11,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class LabeldtlPage implements OnInit {
   tagVoList: [];
+  List:[];
   //tagVoList: string;
   constructor( private ApiService: ApiService,
     private echart: XrEchart,
@@ -23,9 +24,23 @@ export class LabeldtlPage implements OnInit {
       this.tagVoList = JSON.parse(params["codelist"]);
     });
     console.log( this.tagVoList );
+   
+
+  //   this.tagVoList.forEach(function (e) {
+  //     n[e.DJH].SL= e.;
+  //     n[e.DJH].list.push(e);
+  // });
+
+  // let t = [];
+  // for (var a in n)
+  //     t.push(n[a]);
+
+  // return t
+
+
   }
 
-  
+
 
   back() {
     window.history.back();

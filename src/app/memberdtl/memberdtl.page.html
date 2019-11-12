@@ -103,17 +103,14 @@
                     </ion-label>
                 </ion-item>
 
-                <ion-item  class=""  style=""  detail="false" lines="none"  routerLink="/info" >
+                <ion-item  class=""  style=""  detail="true" lines="none"  >
                     <ion-label>
                         <p>剩余优惠券</p>
                     </ion-label>
-                    
-                    <ion-label class="right">
-                        <p class="" ></p>
-                    </ion-label>
             
-                    <ion-label class="right">
-                        <p class="" >无可用优惠券</p>
+                    <ion-label class="right" style="text-align: right;">
+                        <p *ngIf="item.couponInfo.customerCouponNum==0" >无可用优惠券</p>
+                        <p *ngIf="item.couponInfo.customerCouponNum>0"  (click)="topage('discountcoupon','')" >{{item.couponInfo.customerCouponNum}}张</p>
                     </ion-label>
                 </ion-item>
             </ion-col>

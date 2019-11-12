@@ -15,13 +15,13 @@
 
     <ng-container *ngFor="let item of tagVoList; index as i; ">
         <ion-label >
-           <p class="fontweight" style="margin-left: 10px;">{{item.tagSortName}}</p>
-           <ion-button    color="light" size="small" >{{item.name}}{{tagVoList[i]}}</ion-button> 
+            <p class="fontweight" style="margin-left: 10px;"  *ngIf=" i==0 || item.tagSortName != tagVoList[i-1].tagSortName" >{{item.tagSortName}}</p>
+            <ion-button    color="light" size="small" >{{item.name}}</ion-button> 
+
+            <!-- <ion-item-divider *ngIf=" i==0 || item.tagSortName != tagVoList[i-1].tagSortName"   style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider> -->
         </ion-label>
-        <ion-item-divider style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+      
     </ng-container>
-
-
 
 
 

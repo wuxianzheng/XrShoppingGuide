@@ -1,0 +1,41 @@
+<ion-header>
+ 
+
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon color="#222" name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title text-center>优惠券详情</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ng-container *ngFor="let item of list; index as i; ">
+    <ion-card>
+        <ion-card-content style=" width: 100%; position: relative;">
+          <p style="text-align: center;">
+              {{item.coupon.couponName}}
+          </p>
+          <p style="text-align: center;">
+              {{item.coupon.couponValue}}元{{item.coupon.couponType}}
+          </p>
+          <ion-item-divider  style="--background:rgb(173, 173, 173);height: 1px;min-height: 0px;margin-top: 8px;margin-bottom: 8px;"></ion-item-divider>
+          <p style="text-align: center;">
+            使用日期:{{item.coupon.gmtCreate}}~{{item.coupon.gmtUpdate}}
+            </p>
+            <p style="text-align: center;">
+                可用终端:商城、门店通用
+            </p>
+            <p style="text-align: center;">
+                使用说明:{{item.coupon.couponDescription}}
+            </p>
+       
+    
+ 
+        </ion-card-content>
+    </ion-card>
+
+    </ng-container>
+</ion-content>

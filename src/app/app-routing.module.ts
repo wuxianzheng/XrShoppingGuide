@@ -28,7 +28,9 @@ const routes: Routes = [
   { path: 'chargeoff', loadChildren: './chargeoff/chargeoff.module#ChargeoffPageModule' },
   { path: 'chargeoffdtl', loadChildren: './chargeoffdtl/chargeoffdtl.module#ChargeoffdtlPageModule' },
   { path: 'taketheirdtl', loadChildren: './taketheirdtl/taketheirdtl.module#TaketheirdtlPageModule' },
-  { path: 'labeldtl', loadChildren: './labeldtl/labeldtl.module#LabeldtlPageModule' }
+  { path: 'labeldtl', loadChildren: './labeldtl/labeldtl.module#LabeldtlPageModule' },
+  { path: 'discountcoupondtl', loadChildren: './discountcoupondtl/discountcoupondtl.module#DiscountcoupondtlPageModule' },
+  { path: 'discountcoupon', loadChildren: './discountcoupon/discountcoupon.module#DiscountcouponPageModule' }
 
 ];
 @NgModule({

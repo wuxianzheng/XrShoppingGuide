@@ -1,4 +1,4 @@
-{
+ï»¿{
 	"status": "0",
 	"result": {
 		"all": true,
@@ -6,13 +6,13 @@
 			"coupon": {
 				"id": 48155,
 				"supplierId": 11337,
-				"couponName": "ÖÜÇìÃ÷²âÊÔ1",
+				"couponName": "å‘¨åº†æ˜æµ‹è¯•1",
 				"couponValue": 0.50,
 				"startTime": 1572883200000,
 				"endTime": 1576166399000,
 				"color": null,
 				"orderLimitValue": 10.00,
-				"couponDescription": "1. ±ØĞëÔÚ¶©µ¥½ğ¶îÂú×ãÊ±²ÅÄÜÊ¹ÓÃ£»\n2. Ò»ÕÅµêÆÌÓÅ»İÈ¯½öÏŞÓÚµ¥±Ê¶©µ¥Ïû·ÑµÖÓÃ£»\n3. ÓÅ»İÈ¯¹ıÆÚÔò×÷·Ï;\n4. »î¶¯ÉÌÆ·£¬ÈçÉÁ¹ºÃëÉ±²»¿ÉÊ¹ÓÃÓÅ»İÈ¯\n5. ÓÅ»İÈ¯²»¿ÉµÖ¿ÛÔË·Ñ\n",
+				"couponDescription": "1. å¿…é¡»åœ¨è®¢å•é‡‘é¢æ»¡è¶³æ—¶æ‰èƒ½ä½¿ç”¨ï¼›\n2. ä¸€å¼ åº—é“ºä¼˜æƒ åˆ¸ä»…é™äºå•ç¬”è®¢å•æ¶ˆè´¹æŠµç”¨ï¼›\n3. ä¼˜æƒ åˆ¸è¿‡æœŸåˆ™ä½œåºŸ;\n4. æ´»åŠ¨å•†å“ï¼Œå¦‚é—ªè´­ç§’æ€ä¸å¯ä½¿ç”¨ä¼˜æƒ åˆ¸\n5. ä¼˜æƒ åˆ¸ä¸å¯æŠµæ‰£è¿è´¹\n",
 				"orderCount": 0,
 				"orderPayment": 0.00,
 				"gmtCreate": 1572945563000,
@@ -41,7 +41,7 @@
 				"id": 42410,
 				"supplierId": 11337,
 				"couponId": 48155,
-				"promotionName": "ÖÜÇìÃ÷²âÊÔ1",
+				"promotionName": "å‘¨åº†æ˜æµ‹è¯•1",
 				"totalLimitCount": 32,
 				"dayLimitCount": 0,
 				"personLimitCount": 0,
@@ -64,7 +64,7 @@
 				"orderCount": 0,
 				"orderPayment": 0.00,
 				"bossId": 967189,
-				"bossName": "ÁºĞ¡Ï¼",
+				"bossName": "æ¢å°éœ",
 				"couponPromotionSmsId": null,
 				"couponShareStatus": 1,
 				"couponShareCount": 0,
@@ -94,7 +94,7 @@
 			},
 			"customer": {
 				"id": 9684016,
-				"name": "½ĞÊ²Ã´ºÃÄØ",
+				"name": "å«ä»€ä¹ˆå¥½å‘¢",
 				"gender": "1",
 				"avatar": "http://thirdwx.qlogo.cn/mmopen/qCabU1EoRyKp79S4tGhrNVSWerNceicsz8QDuMJ1biaAWfehb2bYpyKu3udssgjsvNnn6OhS7zJF2c4CrPAykEVbYXl1N0jdicr/132",
 				"birthday": 763574400000,
