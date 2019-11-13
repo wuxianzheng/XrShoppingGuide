@@ -1,0 +1,11 @@
+﻿{
+	"ecode": "1000",
+	"msg": "成功",
+	"data": {
+		"headImgUrl": "https://wework.qpic.cn/bizmail/o408AHk9v7DRzgPICaZfS4y8vwwcsiaMibQK5NAVxWuwGOCFuZaNxib9g/0",
+		"signature": "",
+		"qrcode": "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFM8TwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyRFc0YzhVR085cVQxMDAwMHcwN0gAAgQAwlRdAwQAAAAA",
+		"name": "无限政",
+		"storeName": "ceshi（测试）"
+	}
+}

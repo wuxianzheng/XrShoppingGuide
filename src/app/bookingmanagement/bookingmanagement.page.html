@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>预约管理</ion-title>
+  </ion-toolbar>
+  <ion-segment  (ionChange)="query2($event.detail.value)" value="djd">
+      <ion-segment-button value="djd">
+      <ion-label>待接单</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="yjd">
+      <ion-label>已接单</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="ywc">
+          <ion-label>已完成</ion-label>
+      </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+
+</ion-content>

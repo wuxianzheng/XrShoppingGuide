@@ -7,23 +7,13 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
-@Component({
-  selector: 'app-rankingsdtl',
-  templateUrl: './rankingsdtl.page.html',
-  styleUrls: ['./rankingsdtl.page.scss'],
-})
-export class RankingsdtlPage implements OnInit {
 
-  list: any = [];
-  objlist: any = '';
-  topobj: any = '';
-  code: string = "";
-  type:string = "";
-  pageNum: number;
-  infiniteEnable: boolean;
-  beginDate: string;
-  endDate: string;
-  searchstr: string = "";
+@Component({
+  selector: 'app-activityresult',
+  templateUrl: './activityresult.page.html',
+  styleUrls: ['./activityresult.page.scss'],
+})
+export class ActivityresultPage implements OnInit {
 
   constructor(private readonly router: Router,
     private activated: ActivatedRoute,
@@ -34,29 +24,30 @@ export class RankingsdtlPage implements OnInit {
     private camera: Camera,
     private barcode: BarcodeScanner) { }
 
+    list: any = [];
+    objlist: any = '';
+    code: string = "";
+    pageNum: number;
+    infiniteEnable: boolean;
+    beginDate: string;
+    endDate: string;
+    searchstr: string = "";
+
   ngOnInit() {
-    this.activated.queryParams.subscribe((params: Params) => {
-       this.code=params["code"];
-       this.type=params["type"];
-    });
-    console.log(this.type);
-    console.log(this.code);
     this.query();
   }
-  
+
   query(e?){
     let n = this;
     this.pageNum = 1;
     this.code = this.code;
-    this.type = this.type;
     this.infiniteEnable = true;
     this.requestData(a => {
-          n.objlist=a;
-          n.topobj=a.myInfo;
+          n.list=a['list'];
           n.pageNum++;
     }, e);
   }
-  
+
   requestData(e, n?) {
     // if ("" == this.code) {
     //     this.api.toastCtrl.show("搜索内容不能为空");
@@ -66,24 +57,14 @@ export class RankingsdtlPage implements OnInit {
     const t = new Reqdata();
     t.pageNum = this.pageNum;
     t.code = this.code;
-    t.type = this.type;
-    if(t.type=="qg"){
-      t.mode = 'rankingsdtl_qg';
-    }else if(t.type=="bd"){
-      t.mode = 'rankingsdtl_bd';
-    }
+    t.mode = 'activityresult';
     this.api.requestData(t, e);
   }
 
-  //切换筛选
   query2(e?){
-    console.log(e);
-    }
-
-  back() {
-    window.history.back();
+    this.code=e;
+    this.query(this.code);
   }
-
 
 
 }

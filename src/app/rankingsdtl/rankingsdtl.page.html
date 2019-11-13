@@ -7,31 +7,60 @@
       </ion-buttons>
       <ion-title text-center>排行详情</ion-title>
   </ion-toolbar>
-  <ion-segment mode="md" style="padding-top:0;min-height: 0;height: auto;" (ionChange) ="query($event.detail.value)" value="all">
+  <ion-segment  (ionChange) ="query2($event.detail.value)" value="all">
+        <!-- style="padding-top:0;min-height: 0;height: auto;" -->
       <ion-segment-button style="min-width: 0;" value='all'>
-          <div class="segment-border">总排行</div>
+          <ion-label>总排行</ion-label>
       </ion-segment-button>
       <ion-segment-button style="min-width: 0;" value='lastweek'>
-          <div class="segment-border">上周</div>
+          <ion-label>上周</ion-label>
       </ion-segment-button>
       <ion-segment-button style="min-width: 0;" value='lastmonth'>
-          <div class="segment-border">上月</div>
+          <ion-label>上月</ion-label>
       </ion-segment-button>
   </ion-segment>
 </ion-header>
 
 <ion-content>
+    
+    <ion-card>
+         <ion-card-content style="height: 126px; width: 100%; position: relative;">
+            <ion-label class="lefttop">
+             <p class="membertopcolor">{{topobj.rank}}</p>
+                <p class="membercontent">排行</p>
+             </ion-label>
+            <ion-avatar  slot="start" class="ion_contentmiddle" >
+                <ion-img [src]="topobj.headImgUrl" ></ion-img> 
+                <span class="item-title">{{topobj.name}}</span>
+            </ion-avatar>
+            <ion-label class="righttop">
+                <p class="membertopcolor">{{topobj.num}}</p>
+                <p class="membercontent">新增粉丝数</p>
+            </ion-label>
+         </ion-card-content>
+    </ion-card>
 
     <ng-container *ngFor="let item of objlist['list']; index as i; ">
-        <ion-item  detail="flase" (click)="showdetail(item?.id)"> <!--routerLink="/memberdtl"> -->
+        <ion-item  mode="ios"  detail="false" (click)="showdetail(item?.id)">
+            <!--routerLink="/memberdtl"> -->
           <ion-avatar slot="start">
             <ion-img [src]="item.headImgUrl"></ion-img>
           </ion-avatar>
-          <ion-label style="width: 300px;">
-              <p  style="width: 200px;" >{{item.name}}</p>
-              <!-- <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p>
-              <p class="membercontent" style="width: 200px;">{{item.levelName}}|{{item.point}}{{item.unit}}</p> -->
+          <ion-label >
+              <p  class="membertop">{{item.name}}</p>
+               <!-- <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p> -->
+
           </ion-label>
+        <ion-label >
+                <p class="membertopcolor"  >{{item.num}}&nbsp;&nbsp;&nbsp;
+                     <ion-icon name="thumbs-up" class="iconfont membertopright" item-left style="" >
+                    </ion-icon>
+                </p>
+                <p class="membercontent" >新增粉丝数
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="membercontentright" >0</span>
+                </p>
+        </ion-label>
       </ion-item>
     </ng-container>
     

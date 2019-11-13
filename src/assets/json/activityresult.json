@@ -1,0 +1,16 @@
+﻿{
+	"ecode": "1000",
+	"msg": "成功",
+	"data": {
+		"total": 1,
+		"pages": 1,
+		"list": [{
+			"tempNo": "12576",
+			"couponType": 4,
+			"verifyNum": 0,
+			"verifyPercent": 0.0,
+			"receiveNum": 0,
+			"title": "注册DILI会员即送代金券100元"
+		}]
+	}
+}

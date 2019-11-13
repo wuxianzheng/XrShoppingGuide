@@ -56,23 +56,25 @@ export class MemberPage implements OnInit {
     // this.api.requestData(t,function (e) {
     //     n.data = e;
     //   });
-}
+  }
 
   //输入框每次改变后获取输入框内的值
   Change(e) {
     this.searchstr=e;
+  }
+   
+   //回车触发事件
+  keyup(e){
+    if (e.keyCode == 13) {
+       console.log(this.searchstr);
+      }
   }
 
   //单击按钮触发事件
   search() {
     console.log(this.searchstr);
   }
-  //回车触发事件
-  keyup(e){
-     if (e.keyCode == 13) {
-        console.log(this.searchstr);
-       }
-  }
+ 
 
   query(e?){
     let n = this;

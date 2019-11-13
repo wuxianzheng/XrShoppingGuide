@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>我的二维码
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-card-content style="">
+        <ion-item lines="none" detail="false">
+            <ion-avatar slot="start"  class="ion_contentmiddle">
+              <ion-img [src]="objlist.headImgUrl"></ion-img>
+            </ion-avatar>
+        </ion-item>
+        <p class="pclass">{{objlist.name}}</p>
+        <p class="pclass">{{objlist.storeName}}</p>
+        <ion-item  mode="ios" lines="none" detail="false">
+          <ion-thumbnail slot="start"  class="qrcode">
+              <ion-img [src]="objlist.qrcode"></ion-img>
+          </ion-thumbnail>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

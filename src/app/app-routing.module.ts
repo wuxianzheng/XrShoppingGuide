@@ -31,7 +31,12 @@ const routes: Routes = [
   { path: 'labeldtl', loadChildren: './labeldtl/labeldtl.module#LabeldtlPageModule' },
   { path: 'discountcoupondtl', loadChildren: './discountcoupondtl/discountcoupondtl.module#DiscountcoupondtlPageModule' },
   { path: 'discountcoupon', loadChildren: './discountcoupon/discountcoupon.module#DiscountcouponPageModule' },
-  { path: 'rankingsdtl', loadChildren: './rankingsdtl/rankingsdtl.module#RankingsdtlPageModule' }
+  { path: 'rankingsdtl', loadChildren: './rankingsdtl/rankingsdtl.module#RankingsdtlPageModule' },
+  { path: 'myqrcode', loadChildren: './myqrcode/myqrcode.module#MyqrcodePageModule' },
+  { path: 'activityresult', loadChildren: './activityresult/activityresult.module#ActivityresultPageModule' },
+  { path: 'chargeofflist', loadChildren: './chargeofflist/chargeofflist.module#ChargeofflistPageModule' },
+  { path: 'bookingmanagement', loadChildren: './bookingmanagement/bookingmanagement.module#BookingmanagementPageModule' },
+  { path: 'earningsdtl', loadChildren: './earningsdtl/earningsdtl.module#EarningsdtlPageModule' }
 
 ];
 @NgModule({
