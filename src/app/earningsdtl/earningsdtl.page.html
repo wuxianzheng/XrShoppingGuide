@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>收益明细</ion-title>
+    <ion-buttons slot="end" >
+        <ion-button (click)="showCondition()">
+            <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+        </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -10,22 +15,22 @@
             <ion-row >
                 <ion-col text-center>
                     <ion-label>
-                        <p class="item-text-blue ">¥0</p>
-                        <p class="item-text-gray  " style="margin-top: 10px;" >拉粉1人</p>
+                        <p class="item-text-blue " style="font-size: 24px;">¥0</p>
+                        <p class="item-text-gray  " style="margin-top: 10px;font-weight: bold;" >拉粉1人</p>
                     </ion-label>
                 </ion-col>
                 <ion-col text-center>
                     <ion-label>
-                        <p class="item-text-blue ">¥0</p>
-                        <p class="item-text-gray " style="margin-top: 10px;" >开卡0人</p>
+                        <p class="item-text-blue " style="font-size: 24px;">¥0</p>
+                        <p class="item-text-gray " style="margin-top: 10px;font-weight: bold;" >开卡0人</p>
                     </ion-label>
                 </ion-col>
                 <ion-col text-center>
-                        <ion-label>
-                            <p class="item-text-blue ">¥0</p>
-                            <p class="item-text-gray " style="margin-top: 10px;" >核销0张</p>
-                        </ion-label>
-                    </ion-col>
+                    <ion-label>
+                        <p class="item-text-blue " style="font-size: 24px;">¥0</p>
+                        <p class="item-text-gray " style="margin-top: 10px;font-weight: bold;" >核销0张</p>
+                    </ion-label>
+                </ion-col>
             </ion-row>
         </ion-grid>
         </ion-card>

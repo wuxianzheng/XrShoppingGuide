@@ -6,7 +6,7 @@ import { ModalController, IonInfiniteScroll, AlertController, ActionSheetControl
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-
+import { ModalConditionPage  } from '../modal-condition/modal-condition.page';
 
 @Component({
   selector: 'app-earningsdtl',
@@ -33,6 +33,7 @@ export class EarningsdtlPage implements OnInit {
     beginDate: string;
     endDate: string;
     searchstr: string = "";
+    paramsList: any = [];
 
     ngOnInit() {
       this.query();
@@ -66,5 +67,38 @@ export class EarningsdtlPage implements OnInit {
       this.code=e;
       this.query(this.code);
     }
+
+    async showCondition() {
+
+      // alert("ok");
+      let e = this;
+      const n = await this.modalCtrl.create({
+          component: ModalConditionPage,
+          componentProps: {
+              categoryDate: {
+                  enable: true,
+                  beginDate: this.beginDate,
+                  endDate: this.endDate
+              },
+              categoryEmployee: {
+                  enable: true,
+                  list: this.paramsList
+              },
+              beginDate: e.beginDate,
+              endDate: e.endDate
+          }
+      });
+      await n.present();
+      await n.onDidDismiss().then(data => {
+          let x: any = data.data;
+          e.beginDate = x.beginDate;
+          e.endDate = x.endDate;
+          e.paramsList = x.list;
+          console.log(JSON.stringify(x.beginDate));
+          console.log(x.endDate);
+          e.query();
+      });
+  
+  }
 
 }

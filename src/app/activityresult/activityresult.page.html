@@ -17,13 +17,14 @@
     <ion-grid class="item-grid ">
         <ion-row   routerLink="/inventory-summary-ct" >
             <ion-col text-left>
-                <ion-item lines='none'  detail="true" (click)="topage('rankingsdtl','fans')">
+              <ion-item lines='none'  detail="true" (click)="topage('chargeofflist','fans')">
                     <ion-label style="font-size: 13px;">
                       {{item.couponType}} {{item.title}}
                     </ion-label>
                     <ion-label style="width: 20px; font-size: 13px;text-align: right;">
-                      核销记录</ion-label>
-            </ion-item>
+                      核销记录
+                    </ion-label>
+              </ion-item>
             </ion-col>
         </ion-row>
         <ion-row >
@@ -40,11 +41,11 @@
                 </ion-label>
             </ion-col>
             <ion-col text-center>
-                    <ion-label>
-                        <p class="item-text-blue ">{{item.verifyPercent}}</p>
-                        <p class="item-text-gray ">卡券使用率</p>
-                    </ion-label>
-                </ion-col>
+                <ion-label>
+                    <p class="item-text-blue ">{{item.verifyPercent}}</p>
+                    <p class="item-text-gray ">卡券使用率</p>
+                </ion-label>
+            </ion-col>
         </ion-row>
     </ion-grid>
     </ion-card>

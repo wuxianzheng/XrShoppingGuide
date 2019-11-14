@@ -41,19 +41,18 @@
     </ion-card>
 
     <ng-container *ngFor="let item of objlist['list']; index as i; ">
-        <ion-item  mode="ios"  detail="false" (click)="showdetail(item?.id)">
+        <ion-item  mode="ios"  detail="false" >
             <!--routerLink="/memberdtl"> -->
           <ion-avatar slot="start">
-            <ion-img [src]="item.headImgUrl"></ion-img>
+             <ion-img [src]="item.headImgUrl"></ion-img>
           </ion-avatar>
           <ion-label >
-              <p  class="membertop">{{item.name}}</p>
-               <!-- <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p> -->
-
+            <p  class="membertop">{{item.name}}</p>
+            <!-- <p *ngIf="item.customerVo.realName!=''" class="membertop" style="width: 200px;" >{{item.customerVo.realName}}</p> -->
           </ion-label>
-        <ion-label >
+        <ion-label>
                 <p class="membertopcolor"  >{{item.num}}&nbsp;&nbsp;&nbsp;
-                     <ion-icon name="thumbs-up" class="iconfont membertopright" item-left style="" >
+                    <ion-icon name="thumbs-up" class="iconfont membertopright" item-left style="" >
                     </ion-icon>
                 </p>
                 <p class="membercontent" >新增粉丝数

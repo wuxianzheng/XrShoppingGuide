@@ -1,6 +1,11 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>核销明细</ion-title>
+    <ion-buttons slot="end" >
+        <ion-button (click)="showCondition()">
+            <ion-icon src="assets/icon/ios-funnel-outline.svg" color="primary"></ion-icon>
+        </ion-button>
+    </ion-buttons>
   </ion-toolbar>
   <ion-segment  (ionChange)="query2($event.detail.value)" value="kmx">
       <ion-segment-button value="kmx">
@@ -13,5 +18,21 @@
 </ion-header>
 
 <ion-content>
-
+    <ion-card>
+      <ion-grid class="item-grid ">
+          <ion-row   routerLink="/inventory-summary-ct" >
+              <ion-col text-center>
+                <ion-label style="width: 20px; font-size: 27px;text-align: right;">
+                    0</ion-label>
+              </ion-col>
+          </ion-row>
+          <ion-row >
+              <ion-col text-center>
+                  <ion-label>
+                      <p class="item-text-gray"  style="font-size: 17px;">卡券核销数据</p>
+                  </ion-label>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-card>
 </ion-content>

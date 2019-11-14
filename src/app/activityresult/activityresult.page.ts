@@ -66,5 +66,16 @@ export class ActivityresultPage implements OnInit {
     this.query(this.code);
   }
 
+  topage(type: string,vcode:any) {
+    if (type === 'chargeofflist'){
+        this.router.navigate(['/chargeofflist'], {
+            queryParams: {
+             code: vcode,
+             type: this.code
+            }
+        });
+      }
+    }
+
 
 }
