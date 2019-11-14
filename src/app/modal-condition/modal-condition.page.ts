@@ -32,25 +32,30 @@ export class ModalConditionPage implements OnInit {
     }
 
     ngOnInit() {
-
-  }
-  
-
-    dismiss() {
-        const data = { beginDate: this.beginDate, endDate: this.endDate, days: this.days, list: this.list };
-        this.modalCtrl.dismiss(data);
+        //this.reset();
     }
-    buildDate() {
+     
+    //单击选择
+    buildDate(e) {
+        this.days=e;
         const l = new Date;
         l.setDate(l.getDate() - this.days + 1);
         this.beginDate = this.dateFormat.formatDateStr(l);
-       this.endDate = this.dateFormat.formatDateCurrentDate();
+        this.endDate = this.dateFormat.formatDateCurrentDate();
     };
+
+    //重置
     reset() {
         this.beginDate = this.dateFormat.formatDateCurrentMonthFirst();
         this.endDate = this.dateFormat.formatDateCurrentDate();
-            this.days = 0;
+        this.days = 0;
     };
 
+    //确定
+    dismiss() {
+        const data = { beginDate: this.beginDate.match(/(\S*)T/)[1], endDate: this.endDate.match(/(\S*)T/)[1], 
+            days: this.days, list: this.list };
+        this.modalCtrl.dismiss(data);
+    }
 }
 

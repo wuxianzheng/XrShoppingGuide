@@ -94,11 +94,11 @@ export class EarningsdtlPage implements OnInit {
           e.beginDate = x.beginDate;
           e.endDate = x.endDate;
           e.paramsList = x.list;
-          console.log(JSON.stringify(x.beginDate));
-          console.log(x.endDate);
           e.query();
       });
-  
+
+      console.log(e.beginDate);
+      console.log(e.endDate);
   }
 
 }

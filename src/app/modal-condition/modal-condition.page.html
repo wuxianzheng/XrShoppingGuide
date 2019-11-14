@@ -22,20 +22,20 @@
         <ion-row>
             <ion-col text-center>
                 <ion-datetime doneText="确定" cancelText="取消" displayFormat="YYYY-MM-DD"
-                              pickerFormat="YYYY MM DD" placeholder="开始时间" style="border: 1px solid #eee" [(ngModel)]="beginDate"></ion-datetime>
+                              pickerFormat="YYYY-MM-DD" placeholder="开始时间" style="border: 1px solid #eee" [(ngModel)]="beginDate"></ion-datetime>
             </ion-col>
             <ion-col text-center>
                 <ion-datetime doneText="确定" cancelText="取消" displayFormat="YYYY-MM-DD"
-                              pickerFormat="YYYY MM DD" placeholder="结束时间" style="border: 1px solid #eee" [(ngModel)]="endDate"></ion-datetime>
+                              pickerFormat="YYYY-MM-DD" placeholder="结束时间" style="border: 1px solid #eee" [(ngModel)]="endDate"></ion-datetime>
             </ion-col>
         </ion-row>
         <ion-row>
             <ion-col>
                 <ion-segment mode='ios' [(ngModel)]="days" color="primary">
-                    <ion-segment-button aria-pressed="0" value='7' (click)="buildDate()"> 近一周</ion-segment-button>
-                    <ion-segment-button aria-pressed="0" value='30' (click)="buildDate()"> 近一月</ion-segment-button>
-                    <ion-segment-button aria-pressed="0" value='90' (click)="buildDate()"> 近三月</ion-segment-button>
-                    <ion-segment-button aria-pressed="0" value='180' (click)="buildDate()"> 近半年</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='7' (click)="buildDate($event.target.value)"> 近一周</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='30' (click)="buildDate($event.target.value)"> 近一月</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='90' (click)="buildDate($event.target.value)"> 近三月</ion-segment-button>
+                    <ion-segment-button aria-pressed="0" value='180' (click)="buildDate($event.target.value)"> 近半年</ion-segment-button>
                 </ion-segment>
             </ion-col>
         </ion-row>
