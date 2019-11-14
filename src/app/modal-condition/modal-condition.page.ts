@@ -32,7 +32,7 @@ export class ModalConditionPage implements OnInit {
     }
 
     ngOnInit() {
-        //this.reset();
+     //   this.reset();
     }
      
     //单击选择
@@ -53,7 +53,7 @@ export class ModalConditionPage implements OnInit {
 
     //确定
     dismiss() {
-        const data = { beginDate: this.beginDate.match(/(\S*)T/)[1], endDate: this.endDate.match(/(\S*)T/)[1], 
+        const data = { beginDate: this.beginDate, endDate: this.endDate, 
             days: this.days, list: this.list };
         this.modalCtrl.dismiss(data);
     }
