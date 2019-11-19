@@ -23,7 +23,7 @@ export class MemberdtlPage implements OnInit {
     private activated: ActivatedRoute,
     private readonly router: Router
     ) { }
-
+ 
   back() {
     window.history.back();
   }
