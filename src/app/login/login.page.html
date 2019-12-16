@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-toolbar>
+      <ion-title class="ion-text-center">登录</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background-image: url('assets/imgs/login_bg.png');">
+  <div style="padding:40px 0 30px 0" class="ion-text-center"></div>
+  <ion-thumbnail>      
+      <img class="logo" src="assets/imgs/login_logo.png" style="display:none" />       
+  </ion-thumbnail>
+  <div style="padding: 0 40px;" class="ion-text-center"></div>
+    <ion-list lines="none" no-lines>
+          <ion-item>
+              <ion-icon name="call" item-start size="large" item-left slot="start" size="2" color="primary" style="margin: 20px 0 0 0;"></ion-icon>     
+              <ion-input maxlength="11" placeholder="手机号码" type="tel" [(ngModel)]="phone" ></ion-input>
+          </ion-item>
+          <ion-item>
+                  <ion-icon name="lock" item-start size="large" slot="start" item-left  size="2" col-2 color="primary" style="margin: 20px 0 0 0;"></ion-icon>
+                  <ion-input max="99999" maxlength="5" placeholder="验证码" type="number" [(ngModel)]="code" (click)="keyup($event)"></ion-input>
+                  <ion-button color="primary" size="3" col-3 item-end shape="round" (click)="getCode()"></ion-button>
+          </ion-item>
+    </ion-list>
+  <ion-button color="primary" shape="round"  expand="block" (click)="login()">登录</ion-button>
+  <ion-button color="primary" shape="round" expand="block" fill="outline" (click)="toRegisterpage()">注册</ion-button>
+</ion-content>

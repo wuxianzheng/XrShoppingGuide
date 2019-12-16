@@ -36,7 +36,9 @@ const routes: Routes = [
   { path: 'activityresult', loadChildren: './activityresult/activityresult.module#ActivityresultPageModule' },
   { path: 'chargeofflist', loadChildren: './chargeofflist/chargeofflist.module#ChargeofflistPageModule' },
   { path: 'bookingmanagement', loadChildren: './bookingmanagement/bookingmanagement.module#BookingmanagementPageModule' },
-  { path: 'earningsdtl', loadChildren: './earningsdtl/earningsdtl.module#EarningsdtlPageModule' }
+  { path: 'earningsdtl', loadChildren: './earningsdtl/earningsdtl.module#EarningsdtlPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' }
 
 ];
 @NgModule({

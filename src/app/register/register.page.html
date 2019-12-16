@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-button (click)="back()">
+              <ion-icon name="ios-arrow-back"></ion-icon>
+          </ion-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">注册</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content   style= "position: absolute;left: 10px;top:10px;font-size: 3.2rem">
+  <img src="'assets/imgs/login_bg.png" style="width: 100%;display:none"  />
+  <img class="registerUser" src="assets/imgs/register_user.png" class="ion-text-center" />  
+  <div style="padding: 20px 40px 0 40px" class="ion-text-center"></div>
+  <ion-list lines="none" no-lines>
+      <ion-item>
+          <ion-icon name="call"  item-start item-left large size="2" col-2 color="primary" style="margin: 20px 0 0 0;"></ion-icon>
+          <ion-input maxlength="11" placeholder="手机号码" type="tel" [(ngModel)]="phone"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-icon class="iconfont icon-zhenshixingming"  item-start item-left large size="2" col-2 color="primary" style="font-size:20px; margin: 20px 0 0 0;"></ion-icon>
+          <ion-input maxlength="10" placeholder="真实姓名" type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-icon name="lock"  item-start item-left large size="2"  col-2 color="primary" style="margin: 20px 0 0 0;"></ion-icon>
+          <ion-input max="99999" maxlength="5" placeholder="验证码" type="number" [(ngModel)]="code" (click)="keyup($event)"></ion-input>
+          <ion-button color="primary" size="3" col-3 item-end shape="round" (click)="getCode()"></ion-button>
+      </ion-item>
+</ion-list>
+  <ion-button color="primary" shape="round" expand="block" (click)="register()">注册</ion-button>
+</ion-content>

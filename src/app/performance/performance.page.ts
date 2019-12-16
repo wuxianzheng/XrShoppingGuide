@@ -208,7 +208,11 @@ queryHomeChart(showLoad: boolean = null) {
             this.buildEChartOption1(e);
     });
   };
+  showloading(){
 
+
+  }
+  
   getRequestContact(data, showLoad: boolean = null) {
 
      this.ApiService.requestData(data, (e) => {

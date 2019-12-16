@@ -35,10 +35,10 @@ export class RankingsdtlPage implements OnInit {
     private barcode: BarcodeScanner) { }
 
   ngOnInit() {
-    this.activated.queryParams.subscribe((params: Params) => {
+    let params= this.activated.snapshot.queryParams;
        this.code=params["code"];
        this.type=params["type"];
-    });
+    
     console.log(this.type);
     console.log(this.code);
     this.query();

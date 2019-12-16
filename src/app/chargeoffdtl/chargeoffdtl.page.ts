@@ -25,9 +25,9 @@ export class ChargeoffdtlPage implements OnInit {
     private readonly router: Router) { }
 
   ngOnInit() {
-    this.activated.queryParams.subscribe((params: Params) => {
+    let params= this.activated.snapshot.queryParams;
         this.code = params["code"];
-    });
+  
     this.item = {
       id: 0,
       name:'',

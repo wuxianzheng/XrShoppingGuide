@@ -59,6 +59,13 @@ export class ActivityresultPage implements OnInit {
     t.code = this.code;
     t.mode = 'activityresult';
     this.api.requestData(t, e);
+
+    // let p = (new HttpParams()).set("code", this.code).set("beginDate", this.beginDate).set("endDate", this.endDate).set("pageNum", this.pageNum.toString());
+    // this.api.getCopingSummaryDetail(e, {
+    //     params: p,
+    //     refresher: n,
+    //     isLoading: true
+    // });
   }
 
   query2(e?){

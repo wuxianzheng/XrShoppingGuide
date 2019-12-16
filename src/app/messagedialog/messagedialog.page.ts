@@ -15,5 +15,9 @@ export class MessagedialogPage implements OnInit {
   back() {
     window.history.back();
   }
+   
+  showCondition(){
 
+    
+  }
 }

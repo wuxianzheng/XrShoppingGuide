@@ -115,6 +115,11 @@ export class GoodslistPage implements OnInit {
      // alert(this.item.productCode);
    }
    
+   clickedSearch(){
+
+
+   }
+
    showdetail(vcode: string) {
     // alert('detail' + rowno);
      this.router.navigate(['/goodsdtl'], {

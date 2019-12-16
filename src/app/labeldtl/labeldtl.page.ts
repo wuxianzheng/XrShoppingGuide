@@ -10,7 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   styleUrls: ['./labeldtl.page.scss'],
 })
 export class LabeldtlPage implements OnInit {
-  tagVoList: [];
+  tagVoList: any= [];
   List:[];
   //tagVoList: string;
   constructor( private ApiService: ApiService,
@@ -20,9 +20,9 @@ export class LabeldtlPage implements OnInit {
 
 
   ngOnInit() {
-    this.activated.queryParams.subscribe((params: Params) => {
+     let params= this.activated.snapshot.queryParams;
       this.tagVoList = JSON.parse(params["codelist"]);
-    });
+
     console.log( this.tagVoList );
    
 

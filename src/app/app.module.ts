@@ -22,8 +22,11 @@ import { PreviewimgPageModule } from './previewimg/previewimg.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule,
-     IonicModule.forRoot(),
+  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(),
+    IonicStorageModule.forRoot({
+      driverOrder: ['localstorage']
+    }
+    ),
      AppRoutingModule,
      HttpClientModule,
      IonicStorageModule.forRoot(),

@@ -65,11 +65,11 @@ export class GoodsdtlPage implements OnInit {
       miniappProductInfo: '',
       supportAppointment: 0
     };
-    this.activated.queryParams.subscribe((params: Params) => {
+    let params= this.activated.snapshot.queryParams;
           this.code = params["code"];
           this.beginDate = params["beginDate"];
           this.endDate = params["endDate"];
-        });
+       
     this.query();
   }
 

@@ -23,10 +23,10 @@ export class DiscountcoupondtlPage implements OnInit {
     private readonly router: Router) { }
 
   ngOnInit() {
-    this.activated.queryParams.subscribe((params: Params) => {
+    let params= this.activated.snapshot.queryParams;
       this.list = JSON.parse(params["codelist"]);
       this.code=params["code"];
-    });
+    
   }
   
   back() {
