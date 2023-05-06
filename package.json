@@ -38,7 +38,7 @@
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-screen-orientation": "^3.0.1",
     "cordova-sqlite-storage": "^3.2.0",
-    "cordova-windows": "6.0.1",
+    "cordova-windows": "7.0.1",
     "core-js": "^2.5.4",
     "echarts": "^4.2.1",
     "ng-zorro-antd": "^7.3.3",
